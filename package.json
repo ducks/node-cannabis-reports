@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "docs": "npm run jsdoc -- -c jsdoc.json",
-    "jsdoc": "jsdoc",
-    "mocha": "mocha"
+    "docs": "jsdoc -c jsdoc.json"
   },
   "keywords": [
     "cannabis"

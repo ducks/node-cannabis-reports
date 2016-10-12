@@ -5,18 +5,18 @@ A node wrapper around
 
 ## Installation
 
-You should only need to run `npm install`.
+You should only need to run `yarn`.
 
 ## Tests
 
 There is a minimal set of tests currently but more are coming.
-Run `npm run test`.
+Run `yarn run test`.
 
 ## Docs
 
 This module uses jsdoc.
 The docs are located in `/docs`. They are ok for now but will be improving.
-You can regenerate the docs by running `npm run docs`.
+You can regenerate the docs by running `yarn run docs`.
 
 ## Usage
 
