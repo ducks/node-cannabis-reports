@@ -3,6 +3,6 @@
     "protocol": "https",
     "host": "www.cannabisreports.com",
     "path": "/api/v1.0/",
-    "key": ""
+    "key": "CHANGEME"
   }
 }
