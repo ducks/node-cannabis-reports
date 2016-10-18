@@ -5,7 +5,7 @@ A node wrapper around
 
 ## Installation
 
-You should only need to run `yarn`.
+You should only need to run `yarn install --no-lockfile`.
 
 ## Tests
 
