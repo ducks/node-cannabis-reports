@@ -1,3 +1,6 @@
+![Node Cannabis Reports travisci
+badge](https://travis-ci.org/rjgoldsborough/node-cannabis-reports.svg?branch=master)
+
 # Node Cannabis Reports
 
 A node wrapper around 
