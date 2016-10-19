@@ -1,5 +1,7 @@
+<a href="https://travis-ci.org/rjgoldsborough/node-cannabis-reports">
 ![Node Cannabis Reports travisci
 badge](https://travis-ci.org/rjgoldsborough/node-cannabis-reports.svg?branch=master)
+</a>
 
 # Node Cannabis Reports
 
