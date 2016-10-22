@@ -19,8 +19,8 @@ Run `yarn run test`.
 
 ## Docs
 
-This module uses jsdoc.
-The docs are located in `/docs`. They are ok for now but will be improving.
+This module uses [RAML](http://raml.org).
+The docs are located in `index.html`.
 You can regenerate the docs by running `yarn run docs`.
 
 ## Usage
