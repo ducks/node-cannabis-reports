@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "raml2html -- docs.raml > index.html"
   },
   "keywords": [
     "cannabis"
@@ -16,6 +16,7 @@
     "chai": "^3.5.0",
     "jsdoc": "^3.4.0",
     "mocha": "^3.0.2",
+    "raml2html": "^3.0.1",
     "sinon": "^1.17.5",
     "sinon-as-promised": "^4.0.2"
   },

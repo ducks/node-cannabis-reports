@@ -1,0 +1,212 @@
+<!DOCTYPE HTML><html><head><title>node-cannabis-reports API documentation</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="https://github.com/raml2html/raml2html 3.0.1"><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css"><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script><script type="text/javascript">
+      $(document).ready(function() {
+        $('.page-header pre code, .top-resource-description pre code, .modal-body pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+
+        $('[data-toggle]').click(function() {
+          var selector = $(this).data('target') + ' pre code';
+          $(selector).each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+        });
+
+        // open modal on hashes like #_action_get
+        $(window).bind('hashchange', function(e) {
+          var anchor_id = document.location.hash.substr(1); //strip #
+          var element = $('#' + anchor_id);
+
+          // do we have such element + is it a modal?  --> show it
+          if (element.length && element.hasClass('modal')) {
+            element.modal('show');
+          }
+        });
+
+        // execute hashchange on first page load
+        $(window).trigger('hashchange');
+
+        // remove url fragment on modal hide
+        $('.modal').on('hidden.bs.modal', function() {
+          try {
+            if (history && history.replaceState) {
+                history.replaceState({}, '', '#');
+            }
+          } catch(e) {}
+        });
+      });
+    </script><style>
+      .hljs {
+        background: transparent;
+      }
+      .parent {
+        color: #999;
+      }
+      .list-group-item > .badge {
+        float: none;
+        margin-right: 6px;
+      }
+      .panel-title > .methods {
+        float: right;
+      }
+      .badge {
+        border-radius: 0;
+        text-transform: uppercase;
+        width: 70px;
+        font-weight: normal;
+        color: #f3f3f6;
+        line-height: normal;
+      }
+      .badge_get {
+        background-color: #63a8e2;
+      }
+      .badge_post {
+        background-color: #6cbd7d;
+      }
+      .badge_put {
+        background-color: #22bac4;
+      }
+      .badge_delete {
+        background-color: #d26460;
+      }
+      .badge_patch {
+        background-color: #ccc444;
+      }
+      .list-group, .panel-group {
+        margin-bottom: 0;
+      }
+      .panel-group .panel+.panel-white {
+        margin-top: 0;
+      }
+      .panel-group .panel-white {
+        border-bottom: 1px solid #F5F5F5;
+        border-radius: 0;
+      }
+      .panel-white:last-child {
+        border-bottom-color: white;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      .panel-white .panel-heading {
+        background: white;
+      }
+      .tab-pane ul {
+        padding-left: 2em;
+      }
+      .tab-pane h1 {
+        font-size: 1.3em;
+      }
+      .tab-pane h2 {
+        font-size: 1.2em;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #ddd;
+      }
+      .tab-pane h3 {
+        font-size: 1.1em;
+      }
+      .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+      }
+      #sidebar {
+        margin-top: 30px;
+        padding-right: 5px;
+        overflow: auto;
+        height: 90%;
+      }
+      .top-resource-description {
+        border-bottom: 1px solid #ddd;
+        background: #fcfcfc;
+        padding: 15px 15px 0 15px;
+        margin: -15px -15px 10px -15px;
+      }
+      .resource-description {
+        border-bottom: 1px solid #fcfcfc;
+        background: #fcfcfc;
+        padding: 15px 15px 0 15px;
+        margin: -15px -15px 10px -15px;
+      }
+      .resource-description p:last-child {
+        margin: 0;
+      }
+      .list-group .badge {
+        float: left;
+      }
+      .method_description {
+        margin-left: 85px;
+      }
+      .method_description p:last-child {
+        margin: 0;
+      }
+      .list-group-item {
+        cursor: pointer;
+      }
+      .list-group-item:hover {
+        background-color: #f5f5f5;
+      }
+
+      pre code {
+        overflow: auto;
+        word-wrap: normal;
+        white-space: pre;
+      }
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>node-cannabis-reports API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="strains" class="panel-title">Strains</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="strain-object">Strain object</h3><p><small>Cannabis strains in the Cannabis Reports system.</small></p><hr><p>Cannabis strains are the various cultivars available for the cannabis family. Thousands of years of human domestication and breeding of cannabis strains have resulted in a huge variety of attributes that we know and love today.</p><p><a href="http://en.wikipedia.org/wiki/Cultivar">http://en.wikipedia.org/wiki/Cultivar</a></p><p>Over time, strain names have been used by various companies in their attempts to recreate the results of other breeders. Cannabis Reports identifies strains not only by their name, but by their seed company as well, to ensure they are all properly represented.</p><h3 id="strain-attributes">Strain Attributes</h3><hr><table class="table table-bordered table-hover"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td><code>string</code></td><td>Name of the cannabis strain.</td></tr><tr><td>ucpc</td><td><code>string</code></td><td>UCPC code for this strain.</td></tr><tr><td>link</td><td><code>url</code></td><td>Link to the strain in the Cannabis Reports API.</td></tr><tr><td>qr</td><td><code>url</code></td><td>Link to the QR code for this strain.</td></tr><tr><td>url</td><td><code>url</code></td><td>Link to the strain listing on the Cannabis Reports website.</td></tr><tr><td>image</td><td><code>url</code></td><td>Link to the full size image for this strain on Cannabis Reports.</td></tr><tr><td>seedCompany</td><td><code>object</code></td><td>Information about the seed company that created or provides the strain.</td></tr><tr><td>seedCompany.name</td><td><code>string</code></td><td>Name of the seed company for the strain.</td></tr><tr><td>seedCompany.ucpc</td><td><code>string</code></td><td>UCPC for the seed company.</td></tr><tr><td>seedCompany.link</td><td><code>url</code></td><td>Link to the seed company for the strain in the Cannabis Reports API.</td></tr><tr><td>genetics</td><td><code>object</code></td><td>Object that holds information about the genetics for the strain.</td></tr><tr><td>genetics.names</td><td><code>string</code></td><td>The textual representation of the genetics for a strain.</td></tr><tr><td>genetics.ucpc</td><td><code>string</code></td><td>The genetics of a strain with UCPC codes instead of names. Delimiters in the genetic string are parentheses (), lower case "x", common slash /, and question mark ?. These characters will never be included within the UCPC.</td></tr><tr><td>genetics.link</td><td><code>url</code></td><td>Link to the genetics for the strain in the Cannabis Reports API.</td></tr><tr><td>lineage</td><td><code>object</code></td><td>Countries of origin for the genetics for the strain. Object keys are the country name and the values are the two character country codes.</td></tr><tr><td>children</td><td><code>object</code></td><td>Object that holds information about the children for the strain.</td></tr><tr><td>children.count</td><td><code>integer</code></td><td>Number of strains this one has been bred into.</td></tr><tr><td>children.link</td><td><code>url</code></td><td>Link to the children for the strain in the Cannabis Reports API.</td></tr><tr><td>reviews</td><td><code>object</code></td><td>Object that holds information about the reviews for the strain.</td></tr><tr><td>reviews.count</td><td><code>integer</code></td><td>Number of reviews for the strain.</td></tr><tr><td>reviews.link</td><td><code>url</code></td><td>Link to the reviews for the strain in the Cannabis Reports API.</td></tr><tr><td>createdAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was added.</td></tr><tr><td>updatedAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was updated.</td></tr></tbody></table><h3 id="where-s-indica-sativa-hybrid-">Where&#39;s Indica, Sativa, Hybrid?</h3><hr><p>Mainstream cannabis science does not subscribe to what has become a common classification scheme for identifying cannabis strains. There are differing opinions on the appropriate taxonomy of cannabis in the scientific community. Until there is consensus, Cannabis Reports does not participate in this type of classification.</p><p>Cannabis consumers have become used to associating feelings to these words which were previously used to describe physical or genetic characteristics of a plant.</p><p>To this effect, we have given producers the ability to classify their products as indica, sativa, and hybrid as it has become part of the common vocabulary. We have also allowed for strains to be listed on menus in ways that consumers have grown accustomed to, with most strains ending up in the "hybrid" category.</p><h3 id="where-are-the-thc-cbd-and-other-percentages-for-strains-">Where are the THC, CBD, and Other Percentages for Strains?</h3><hr><p>Results from cannabis labs on the percentage of THC and CBD content are based upon samples of the overall harvest for particular strains.</p><p>The cannabis plant contains hundreds of chemicals that interact together to provide the experience you have when you consume it. Science has shown that genetics of a strain can determine whether the disposition exists to produce the chemicals we measure for. However, the overall abundance of them in what you are consuming can vary depending on many factors:</p><ol><li>Skill of producer.</li><li>Environment.</li><li>Genetic phenotypes from seeds.</li><li>Part of plant consumed.</li><li>Processing.</li></ol><p>Cannabis Reports lets producers tie lab tests to individual products, batches of products, or flowers. For the overall information of a cannabis strain, however, we recognize that the actual results can vary from crop to crop.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains"><span class="parent"></span>/strains</a> <span class="methods"><a href="#strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of strains with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of strains with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_get_request" data-toggle="tab">Request</a></li><li><a href="#strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p></li></ul></div><div class="tab-pane" id="strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "501st OG",
+      "ucpc": "4FMDMKJYQL000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/4FMDMKJYQL000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/rare-dankness-seeds/501st-og/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/rare-dankness-seeds/501st-og",
+      "image": "https://www.cannabisreports.com/images/strains/a/full_aac791c4ba5e08993b92130a8d95cff56cd3e242.jpg",
+      "seedCompany": {
+        "name": "Rare Dankness Seeds",
+        "ucpc": "4FMDM00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/4FMDM00000000000000000000"
+      },
+      "genetics": {
+        "names": "Skywalker OG x Rare Dankness #1",
+        "ucpc": "9XVU7ZDGYL000000000000000 x 4FMDM9DTWX000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/4FMDMKJYQL000000000000000/genetics"
+      },
+      "lineage": {
+        "Afghanistan": "AF"
+      },
+      "children": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/4FMDMKJYQL000000000000000/children"
+      },
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/4FMDMKJYQL000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2014-10-01 17:12:35",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-10-01 17:12:35",
+        "timezone": "UTC"
+      }
+    },
+  ],
+  "meta": {
+    "pagination": {
+      "total": 4738,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 474,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/strains?sort=name&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/strains?sort=name&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains_search__query_"><span class="parent">/strains/search</span>/{query}</a> <span class="methods"><a href="#strains_search__query__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains_search__query_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_search__query__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Returns search results for strains in our database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_search__query__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/search</span>/{query}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Returns search results for strains in our database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_search__query__get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_search__query__get_request"><h3>URI Parameters</h3><ul><li><strong>query</strong>: <em>required (string)</em><p>Search query to find strains in our system. Must be at least 2 characters.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc_"><span class="parent">/strains</span>/{ucpc}</a> <span class="methods"><a href="#strains__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual strain based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual strain based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__user"><span class="parent">/strains/{ucpc}</span>/user</a> <span class="methods"><a href="#strains__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the strain to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the strain to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__user_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__reviews"><span class="parent">/strains/{ucpc}</span>/reviews</a> <span class="methods"><a href="#strains__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__reviews_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__effectsFlavors"><span class="parent">/strains/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#strains__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__seedCompany"><span class="parent">/strains/{ucpc}</span>/seedCompany</a> <span class="methods"><a href="#strains__ucpc__seedCompany_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__seedCompany" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__seedCompany_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the seed company that was responsible for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__seedCompany_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/seedCompany</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the seed company that was responsible for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__seedCompany_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__seedCompany_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__genetics"><span class="parent">/strains/{ucpc}</span>/genetics</a> <span class="methods"><a href="#strains__ucpc__genetics_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__genetics" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__genetics_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__genetics_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/genetics</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__genetics_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__genetics_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__children"><span class="parent">/strains/{ucpc}</span>/children</a> <span class="methods"><a href="#strains__ucpc__children_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__children" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__children_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the child strains that this one has been bred into.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__children_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/children</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the child strains that this one has been bred into.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__children_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__children_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__availability"><span class="parent">/strains/{ucpc}</span>/availability</a> <span class="methods"><a href="#strains__ucpc__availability_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__availability" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__availability_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of a strain using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__availability_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/availability</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of a strain using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__availability_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__availability_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li></ul></div></div></div></div></body></html>
