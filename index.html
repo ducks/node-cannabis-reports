@@ -1232,37 +1232,39 @@
 }
 </code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__strain"><span class="parent">/extracts/{ucpc}</span>/strain</a> <span class="methods"><a href="#extracts__ucpc__strain_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__strain" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__strain_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the information about a strain for an extract with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__strain_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/strain</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the information about a strain for an extract with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__strain_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__strain_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__strain_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__strain_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "data": {
-    "name": "Ogre Berry",
-    "ucpc": "9XVU74N646000000000000000",
-    "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000",
-    "qr": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4/qr-code.svg",
-    "url": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4",
-    "image": "https://www.cannabisreports.com/images/strains/8/full_8dd6dbd49b15125172a96219086f81246e1ae15b.jpg",
+    "name": "Blackwater OG",
+    "ucpc": "QLG39RN2AF000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/QLG39RN2AF000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/the-cali-connection/blackwater/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/the-cali-connection/blackwater",
+    "image": "https://www.cannabisreports.com/images/strains/d/full_d638b0d93eed0eca94c0894cf4e9dc7bdd2f860c.jpg",
     "seedCompany": {
-      "name": "HappyDay Farms",
-      "ucpc": "AHZ7H00000000000000000000",
-      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/AHZ7H00000000000000000000"
+      "name": "The Cali Connection",
+      "ucpc": "QLG3900000000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/QLG3900000000000000000000"
     },
     "genetics": {
-      "names": "Ogre x Island Mountain Strawberry Afghani",
-      "ucpc": "9XVU7U9HUK000000000000000 x 9XVU7D492Z000000000000000",
-      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/genetics"
+      "names": "Mendo Purps x San Fernando Valley OG (SFV OG)",
+      "ucpc": "9XVU7LXP9U000000000000000 x 9XVU7EYMZW000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/QLG39RN2AF000000000000000/genetics"
     },
-    "lineage": [],
+    "lineage": {
+      "Afghanistan": "AF"
+    },
     "children": {
-      "count": 0,
-      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/children"
+      "count": 2,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/QLG39RN2AF000000000000000/children"
     },
     "reviews": {
       "count": 0,
-      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/reviews"
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/QLG39RN2AF000000000000000/reviews"
     },
     "createdAt": {
-      "datetime": "2015-07-29 18:11:45",
+      "datetime": "2014-07-28 19:16:21",
       "timezone": "UTC"
     },
     "updatedAt": {
-      "datetime": "2015-12-09 23:07:38",
+      "datetime": "2014-08-01 19:52:40",
       "timezone": "UTC"
     }
   }
@@ -1319,4 +1321,363 @@
   "message": "Not found. Could not find an extract with that UCPC.",
   "status_code": 404
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="edibles" class="panel-title">Edibles</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="edible-object">Edible Object</h3><p><small>Cannabis edibles in the Cannabis Reports system.</small></p><hr><p>Cannabis edibles cover a wide variety of consumable products that contain cannabis in various forms. From cotton candy, to tinctures, to dog treats, and everything in between. If it&#39;s a form of cannabis that is meant to be consumed, we categorize it as an edible.</p><p>The main forms of edibles that Cannabis Reports recognizes are:</p><ul><li>Baked Goods</li><li>Candy</li><li>Treat</li><li>Chocolate</li><li>Snack</li><li>Beverage</li><li>Pill</li><li>Tincture</li></ul><p>We also support "Other" types of edibles. Some examples are:</p><ul><li>Butter</li><li>Honey</li><li>Breath Strips</li><li>Tea</li><li>Ice Cream</li></ul><p>Producers measure the amount of cannabis in their edibles in a variety of ways. We recognize 4 ways for measuring the cannabis contents:</p><ul><li>THC mg</li><li>CBD mg</li><li>Cannabis mg</li><li>Hash Oil mg</li></ul><p>More information about cannabis edibles can be found in our FAQ here:</p><p><a href="https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-edible">https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-edible</a></p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the edible.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this edible.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the edible in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this edible.</p></div></td></tr><tr><td><div><p>barcode</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the barcode for this edible.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the edible listing on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this edible.</p></div></td></tr><tr><td><div><p>producer</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Information about the <a>producer</a> that created the edible.</p></div></td></tr><tr><td><div><p>producer.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>producer</a> of the edible.</p></div></td></tr><tr><td><div><p>producer.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> for the <a>producer</a>.</p></div></td></tr><tr><td><div><p>producer.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>producer</a> in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Type of cannabis edible.</p></div></td></tr><tr><td><div><p>strain</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p><a>Strain</a> that was used in this edible.</p></div></td></tr><tr><td><div><p>strain.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>strain</a> used in this edible.</p></div></td></tr><tr><td><div><p>strain.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> of the <a>strain</a> used in this edible.</p></div></td></tr><tr><td><div><p>strain.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strain</a> used in this edible in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>labTest</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the PDF containing lab test information for this edible.</p></div></td></tr><tr><td><div><p>thc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Milligrams of <a>THC</a> in this edible.</p></div></td></tr><tr><td><div><p>cbd</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Milligrams of <a>CBD</a> in this edible.</p></div></td></tr><tr><td><div><p>cannabis</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Milligrams of cannabis in this edible.</p></div></td></tr><tr><td><div><p>hashOil</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Milligrams of hash oil in this edible.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for the edible.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of reviews for the edible.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the reviews for the edible.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the edible was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the edible was updated.</p></div></td></tr></tbody></table><h3 id="explore-edible-endpoints">Explore Edible Endpoints</h3><hr><p><small>Here are some of the results available from the different edible endpoints:</small></p><table class="table table-bordered table-hover"><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/edibles</a></p></div></td><td><div><p>Gets a paginated list of edibles with optional sorting.</p></div></td></tr><tr><td><div><p><a>/edibles/type/:edibleType</a></p></div></td><td><div><p>Gets a paginated list of edibles for a given type with optional sorting.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc</a></p></div></td><td><div><p>Gets an individual edible based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc/reviews</a></p></div></td><td><div><p>Get the reviews for a cannabis edible.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc/effectsFlavors</a></p></div></td><td><div><p>Get the average effects and flavors from reviews for this edible.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc/producer</a></p></div></td><td><div><p>Gets the producer for a given edible.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc/strain</a></p></div></td><td><div><p>Gets the information about a strain for an edible with the given UCPC.</p></div></td></tr><tr><td><div><p><a>/edibles/:ucpc/availability/geo/:lat/:lng/:radius</a></p></div></td><td><div><p>Get information about the availability of an edible using latitude and longitude.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles"><span class="parent"></span>/edibles</a> <span class="methods"><a href="#edibles_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of edibles with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/edibles</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of edibles with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="edibles_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Marshmellow Crispy",
+      "ucpc": "00000000006769LXCE2X00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/edibles/00000000006769LXCE2X00000",
+      "qr": "https://www.cannabisreports.com/edible-reports/qr-code/the-baykery/marshmellow-crispy",
+      "barcode": "https://www.cannabisreports.com/edible-reports/barcode/the-baykery/marshmellow-crispy",
+      "url": "https://www.cannabisreports.com/edible-reports/the-baykery/marshmellow-crispy",
+      "image": "https://www.cannabisreports.com/images/edibles/5/full_541082d069457b57e90d203d0d015c26ee2be071.jpg",
+      "producer": {
+        "name": "The Baykery",
+        "ucpc": "00000000006769L0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000006769L0000000000"
+      },
+      "type": "treat",
+      "strain": [],
+      "labTest": false,
+      "thc": "120mg",
+      "cbd": false,
+      "cannabis": false,
+      "hashOil": false,
+      "reviews": 0,
+      "createdAt": {
+        "datetime": "2014-09-29 17:52:50",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-05-05 00:56:27",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 3068,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 307,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/edibles?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/edibles?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles_type__edibleType_"><span class="parent">/edibles</span>/type/{edibleType}</a> <span class="methods"><a href="#edibles_type__edibleType__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles_type__edibleType_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles_type__edibleType__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of edibles with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles_type__edibleType__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles</span>/type/{edibleType}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of edibles with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles_type__edibleType__get_request" data-toggle="tab">Request</a></li><li><a href="#edibles_type__edibleType__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles_type__edibleType__get_request"><h3>URI Parameters</h3><ul><li><strong>edibleType</strong>: <em>required (string)</em><p>One of the various types of edibles you would like to filter by. See <code>Cannabis Edibles</code> object definition for valid types.</p><p><strong>Example</strong>:</p><pre>chocolate</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="edibles_type__edibleType__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Terra Blueberry Bites",
+      "ucpc": "0000000000L6M7ENLJVX00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/edibles/0000000000L6M7ENLJVX00000",
+      "qr": "https://www.cannabisreports.com/edible-reports/qr-code/kiva/terra-blueberry-bites",
+      "barcode": "https://www.cannabisreports.com/edible-reports/barcode/kiva/terra-blueberry-bites",
+      "url": "https://www.cannabisreports.com/edible-reports/kiva/terra-blueberry-bites",
+      "image": "https://www.cannabisreports.com/images/edibles/f/full_f29d34f36f40c96e26419caad6a668618bd417bb.jpg",
+      "producer": {
+        "name": "Kiva",
+        "ucpc": "0000000000L6M7E0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000L6M7E0000000000"
+      },
+      "type": "chocolate",
+      "strain": [],
+      "labTest": false,
+      "thc": "120mg",
+      "cbd": false,
+      "cannabis": false,
+      "hashOil": false,
+      "reviews": 2,
+      "createdAt": {
+        "datetime": "2015-03-12 21:02:48",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-03-12 21:02:48",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 354,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 36,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/edibles/type/chocolate?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/edibles/type/chocolate?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc_"><span class="parent">/edibles</span>/{ucpc}</a> <span class="methods"><a href="#edibles__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual edible based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual edible based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul></div><div class="tab-pane" id="edibles__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Soda - Girl Scout Cookies and Cream",
+    "ucpc": "4KXM32V9YFC3G2EUNWP400000",
+    "link": "https://www.cannabisreports.com/api/v1.0/edibles/4KXM32V9YFC3G2EUNWP400000",
+    "qr": "https://www.cannabisreports.com/edible-reports/qr-code/kushtown/soda-girl-scout-cookies-and-cream",
+    "barcode": "https://www.cannabisreports.com/edible-reports/barcode/kushtown/soda-girl-scout-cookies-and-cream",
+    "url": "https://www.cannabisreports.com/edible-reports/kushtown/soda-girl-scout-cookies-and-cream",
+    "image": "https://www.cannabisreports.com/images/strains/no_image.png",
+    "producer": {
+      "name": "Kushtown",
+      "ucpc": "0000000000C3G2E0000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000"
+    },
+    "type": "beverage",
+    "strain": {
+      "name": "Girl Scout Cookies",
+      "ucpc": "4KXM32V9YF000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/4KXM32V9YF000000000000000"
+    },
+    "labTest": false,
+    "thc": "78mg",
+    "cbd": false,
+    "cannabis": false,
+    "hashOil": false,
+    "reviews": 0,
+    "createdAt": {
+      "datetime": "2015-04-20 08:13:34",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-04-20 15:43:59",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__user"><span class="parent">/edibles/{ucpc}</span>/user</a> <span class="methods"><a href="#edibles__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the edible to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the edible to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__user_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__user_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul></div><div class="tab-pane" id="edibles__ucpc__user_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "nickname": "Untamed Dame",
+    "link": "https://www.cannabisreports.com/api/v1.0/users/untamed-dame",
+    "tagline": "Let&#39;s get weird.",
+    "url": "https://www.cannabisreports.com/user/profile/untamed-dame",
+    "slug": "untamed-dame",
+    "createdAt": {
+      "datetime": "2014-12-07 23:30:37",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-04-22 18:24:18",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__reviews"><span class="parent">/edibles/{ucpc}</span>/reviews</a> <span class="methods"><a href="#edibles__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis edible.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis edible.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="edibles__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/be1a9af83cd9766c4635d4aa3d21eb8c6ae787ed",
+      "url": "https://www.cannabisreports.com/smoke-reports/2015/04/07/be1a9af83cd9766c4635d4aa3d21eb8c6ae787ed/david",
+      "euphoria": "6",
+      "creativity": "8",
+      "pain_relief": null,
+      "appetite_gain": "10",
+      "calming": "6",
+      "anxiety": null,
+      "spicy": "4",
+      "earthy": "4",
+      "fruity": "8",
+      "sour": null,
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2015-04-07 00:20:31",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-07 00:20:31",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 2,
+      "count": 2,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__effectsFlavors"><span class="parent">/edibles/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#edibles__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this edible.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this edible.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__effectsFlavors_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul></div><div class="tab-pane" id="edibles__ucpc__effectsFlavors_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "euphoria": "6.0000",
+    "creativity": "8.0000",
+    "calming": "6.0000",
+    "numbness": "8.0000",
+    "appetite_gain": "10.0000",
+    "dry_mouth": "4.5000",
+    "fruity": "9.0000",
+    "spicy": "4.0000",
+    "earthy": "4.0000",
+    "sour": null,
+    "sweet": "9.0000",
+    "pine": null,
+    "anxiety": null,
+    "reviews": 2
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__producer"><span class="parent">/edibles/{ucpc}</span>/producer</a> <span class="methods"><a href="#edibles__ucpc__producer_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__producer" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>More information about the various fields for the producer can be found in the cannabis producer object definition section.</p></div><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__producer_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the producer for a given edible.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__producer_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/producer</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the producer for a given edible.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__producer_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__producer_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__producer_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul></div><div class="tab-pane" id="edibles__ucpc__producer_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Kushtown",
+    "ucpc": "0000000000C3G2E0000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000",
+    "qr": "https://www.cannabisreports.com/producer-reports/kushtown/qr-code",
+    "url": "https://www.cannabisreports.com/producer-reports/kushtown",
+    "image": "https://www.cannabisreports.com/images/profile/c/full_c2c46561e1edec61ea0ffdea01c94509abd5c010.jpg",
+    "reviews": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000/reviews"
+    },
+    "extracts": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000/extracts"
+    },
+    "edibles": {
+      "count": 44,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000/edibles"
+    },
+    "products": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3G2E0000000000/products"
+    },
+    "createdAt": {
+      "datetime": "2014-11-07 03:39:09",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2014-11-07 04:13:54",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__strain"><span class="parent">/edibles/{ucpc}</span>/strain</a> <span class="methods"><a href="#edibles__ucpc__strain_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__strain" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__strain_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the information about a strain for an edible with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__strain_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/strain</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the information about a strain for an edible with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__strain_get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__strain_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__strain_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li></ul></div><div class="tab-pane" id="edibles__ucpc__strain_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Girl Scout Cookies",
+    "ucpc": "4KXM32V9YF000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/4KXM32V9YF000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/cookie-family/girl-scout-cookies/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/cookie-family/girl-scout-cookies",
+    "image": "https://www.cannabisreports.com/images/strains/b/full_bb267b218903ded6aff0d4cf1ec6e911e22017e3.jpg",
+    "seedCompany": {
+      "name": "Cookie Family",
+      "ucpc": "4KXM300000000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/4KXM300000000000000000000"
+    },
+    "genetics": {
+      "names": "F1 / Durban Poison / OG Kush (Ogreskush)",
+      "ucpc": "4KXM33PGZW000000000000000 / 9XVU7GD2AP000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/4KXM32V9YF000000000000000/genetics"
+    },
+    "lineage": {
+      "Afghanistan": "AF",
+      "South Africa": "ZA"
+    },
+    "children": {
+      "count": 66,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/4KXM32V9YF000000000000000/children"
+    },
+    "reviews": {
+      "count": 2,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/4KXM32V9YF000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2014-05-16 16:42:38",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2014-06-07 08:06:32",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_edibles__ucpc__availability_geo__lat___lng___radius_"><span class="parent">/edibles/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</a> <span class="methods"><a href="#edibles__ucpc__availability_geo__lat___lng___radius__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_edibles__ucpc__availability_geo__lat___lng___radius_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will provide a paginated list of item summary objects for this particular edible.</p></div><div class="list-group"><div onclick="window.location.href = '#edibles__ucpc__availability_geo__lat___lng___radius__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of an edible using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="edibles__ucpc__availability_geo__lat___lng___radius__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/edibles/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of an edible using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#edibles__ucpc__availability_geo__lat___lng___radius__get_request" data-toggle="tab">Request</a></li><li><a href="#edibles__ucpc__availability_geo__lat___lng___radius__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="edibles__ucpc__availability_geo__lat___lng___radius__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis edible you want information about.</p><p><strong>Example</strong>:</p><pre>4KXM32V9YFC3G2EUNWP400000</pre></li><li><strong>lat</strong>: <em>required (string)</em><p>Latitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>37.7749295</pre></li><li><strong>lng</strong>: <em>required (string)</em><p>Longitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>-122.4194155</pre></li><li><strong>radius</strong>: <em>required (integer)</em><p>Radius to search for in miles, max 25.</p><p><strong>Example</strong>:</p><pre><code>10</code></pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="edibles__ucpc__availability_geo__lat___lng___radius__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Chocolate Bar (180MG) - Vanilla Chai Milk Chocolate",
+      "ucpc": "0000000000L6M7ECZEXH00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/edibles/0000000000L6M7ECZEXH00000",
+      "type": "edible",
+      "location": {
+        "name": "SFFOGG",
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/sffogg",
+        "lat": "37.7717311",
+        "lng": "-122.4165409"
+      },
+      "price": "20.00",
+      "price_half_gram": null,
+      "price_gram": null,
+      "price_eighth": null,
+      "price_quarter": null,
+      "price_half_ounce": null,
+      "price_ounce": null,
+      "createdAt": {
+        "datetime": "2014-05-20 21:29:37",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-21 04:53:05",
+        "timezone": "UTC"
+      }
+    },
+    { ... }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 35,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 4,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/edibles/0000000000L6M7ECZEXH00000/availability/geo/37.7749295/-122.4194155/25?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an edible with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li><li><a href="#edibles">Edibles</a></li></ul></div></div></div></div></body></html>
