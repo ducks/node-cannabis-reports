@@ -209,6 +209,150 @@ title: node-cannabis-reports
     strain, however, we recognize that the actual results can vary from crop to
     crop.
 
+    ### Explore Strain Endpoints
+    <hr>
+    <smaller>Here are some of the results available from the different strain
+      endpoints</smaller>
+
+    <table class="table table-bordered table-hover">
+      <tbody>
+        <tr>
+          <th>
+            Endpoint
+          </th>
+          <th>
+            Result
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets a paginated list of strains with optional sorting.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/search/:query</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Returns search results for strains in our database.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets an individual strain based on the UCPC.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/reviews</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the reviews for a cannabis strain.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/effectsFlavors</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the average effects and flavors from reviews for this strain.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/seedCompany</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the seed company that was responsible for a cannabis strain.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/genetics</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the strains that were the parent material for the strain with the given UCPC.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/children</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the child strains that this one has been bred into.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/strains/:ucpc/availability/geo/:lat/:lng/:radius</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets information about the availability of a strain using latitude and longitude.</p>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   get:
     description: Gets a paginated list of strains with optional sorting.
     queryParameters:
@@ -467,6 +611,914 @@ title: node-cannabis-reports
     /availability/geo/{lat}/{lng}/{radius}:
       description: This will provide a paginated list of item summary objects
         for this particular strain.
+      uriParameters:
+        lat:
+          type: string
+          example: 37.7749295
+          description: Latitude for the center of your availability search.
+          required: true
+        lng:
+          type: string
+          example: -122.4194155
+          description: Longitude for the center of your availability search.
+          required: true
+        radius:
+          type: integer
+          example: 10
+          description: Radius to search for in miles, max 25.
+
+      get:
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page of
+              results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+        description: Get information about the availability of a strain using
+          latitude and longitude.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-availability-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
+
+/flowers:
+  displayName: Flowers
+  description: |
+    ### Flower object
+
+    <smaller>Cannabis flowers in the Cannabis Reports system.</smaller>
+    <hr>
+
+    Cannabis flowers are distinct products that can be found on retailer menus.
+    The Cannabis Reports system allows for specific batches of cannabis flowers
+    to be linked directly to the cultivator that grew the plant, while still
+    maintaining a connection to the original genetics of the strain. Designating
+    flowers as distinct items improves our ability to discuss the variety of
+    flower quality that can be produced from the same strain grown at different
+    farms.
+
+    The main forms of flowers that Cannabis Reports recognizes are:
+
+    - Flowers
+    - Seeds
+    - Clones
+    - Shake
+
+    Producers measure the cannabinoid content of their flowers in many ways.
+    Currently, Cannabis Reports allows producers to display the percentage of
+    weight for THC and CBD
+
+    <table class="table table-bordered table-hover">
+      <tbody>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Type
+          </th>
+          <th>
+            Description
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>name</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Name of the flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>ucpc</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><a>UCPC</a> code for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>link</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the flower in the Cannabis Reports API.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>qr</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the QR code for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>barcode</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the barcode for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>url</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the flower listing on the Cannabis Reports website.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>image</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the full size image for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>producer</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>object</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Information about the <a>producer</a> that created the
+              flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>producer.name</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Name of the <a>producer</a> of the flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>producer.ucpc</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><a>UCPC</a> for the <a>producer</a>.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>producer.link</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the <a>producer</a> in the Cannabis Reports API.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>type</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Type of cannabis flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>strain</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>object</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><a>Strain</a> that was used for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>strain.name</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Name of the <a>strain</a> used for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>strain.ucpc</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><a>UCPC</a> of the <a>strain</a> used for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>strain.link</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the <a>strain</a> used in this flower in the Cannabis
+              Reports API.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>labTest</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the PDF containing lab test information for this
+              flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>thc</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Percentage of <a>THC</a> in this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>cbd</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>string</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Percentage of <a>CBD</a> in this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>reviews</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>object</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Object containing information on the reviews for the
+              flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>reviews.count</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>integer</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Number of reviews for the flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>reviews.link</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>url</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Link to the reviews for the flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>createdAt</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>object</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Object containing two strings, "dateTime" and the "timezone"
+              when the flower was added.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p>updatedAt</p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p><code>object</code></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Object containing two strings, "dateTime" and the "timezone"
+              when the flower was updated.</p>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    ### Explore Flowers Endpoints
+    <hr>
+    <smaller>Here are some of the results available from the different flower
+      endpoints:</smaller>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            Endpoint
+          </th>
+          <th>
+            Result
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets a paginated list of flowers with optional sorting.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/type/:flowerType</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets a paginated list of products for a given type with optional sorting.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets an individual flower based on the UCPC.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc/reviews</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the reviews for a cannabis flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc/effectsFlavors</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the average effects and flavors from reviews for this flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc/producer</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the producer for a given flower.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc/strain</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Gets the information about a strain for a flower with the given UCPC.</p>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <p><a>/flowers/:ucpc/availability/geo/:lat/:lng/:radius</a></p>
+            </div>
+
+          </td>
+          <td>
+            <div>
+              <p>Get information about the availability of a flower using latitude and longitude.</p>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  get:
+    description: Gets a paginated list of flowers with optional sorting.
+    queryParameters:
+      page:
+        type: integer
+        description: |
+          Which page of results you want.
+
+          By default, Cannabis Reports will return 10 records at a time for the
+          strains API. You can use the page argument to fetch the page of
+          results you want.
+
+          Check out the pagination section of this documentation for more
+          information.
+      sort:
+        type: string
+        description: |
+          How you would like the results sorted.
+
+          You can include a single sort option to get the records by when they
+          were updated, created, or alphabetically.
+
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Sort Option</th>
+                <th>Sort Direction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>createdAt</td>
+                <td>Oldest records.</td>
+              </tr>
+              <tr>
+                <td>-createdAt</td>
+                <td>Newest records.</td>
+              </tr>
+              <tr>
+                <td>updatedAt</td>
+                <td>Oldest updated records</td>
+              </tr>
+              <tr>
+                <td>-updatedAt</td>
+                <td>Newly updated records.</td>
+              </tr>
+            </tbody>
+          </table>
+
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include raml/data/flowers/flowers-200.js
+      400:
+        body:
+          application/json:
+            example: !include raml/data/flowers/flowers-400.js
+
+  /type/{flowerType}:
+    uriParameters:
+      flowerType:
+        type: string
+        example: flowers
+        description: The type of flowers you want to search through.
+
+    get:
+      description: Gets a paginated list of products for a given type with
+        optional sorting.
+      queryParameters:
+        page:
+          type: integer
+          description: |
+            Which page of results you want.
+
+            By default, Cannabis Reports will return 10 records at a time for
+            the strains API. You can use the page argument to fetch the page of
+            results you want.
+
+            Check out the pagination section of this documentation for more
+            information.
+        sort:
+          type: string
+          description: |
+            How you would like the results sorted.
+
+            You can include a single sort option to get the records by when they
+            were updated, created, or alphabetically.
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/flowers/flower-type-200.js
+        400:
+          body:
+            application/json:
+              example: !include raml/data/flowers/flowers-400.js
+
+  /{ucpc}:
+    uriParameters:
+      ucpc:
+        type: string
+        example: AHZ7H4N6467FVUDY3DAY00000
+        description: UCPC for the cannabis flower you want information about.
+        required: true
+
+    get:
+      description: Gets an individual flower based on the UCPC.
+
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/flowers/flowers-ucpc-200.js
+        400:
+          body:
+            application/json:
+              example: !include raml/data/flowers/flowers-400.js
+
+    /user:
+      get:
+        description: Get the user who added the product to the database.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-user-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-404.js
+
+    /reviews:
+      get:
+        description: Get the reviews for a cannabis flower.
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page
+              of results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-reviews-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-404.js
+
+    /effectsFlavors:
+      get:
+        description: Get the average effects and flavors from reviews for this
+          flower.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-effectsFlavors-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-404.js
+
+    /producer:
+      get:
+        description: Gets the producer for a given flower.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-producers-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-404.js
+
+    /strain:
+      get:
+        description: Gets the information about a strain for a flower with the
+          given UCPC. 
+
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-strain-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/flowers/flowers-404.js
+
+    /availability/geo/{lat}/{lng}/{radius}:
+      description: Get information about the availability of a product using
+        latitude and longitude. 
       uriParameters:
         lat:
           type: string
