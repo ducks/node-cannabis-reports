@@ -23,7 +23,7 @@ title: node-cannabis-reports
 
     ### Strain Attributes
     <hr>
-    
+
     <table class="table table-bordered table-hover">
       <thead>
         <tr>
@@ -214,10 +214,59 @@ title: node-cannabis-reports
     queryParameters:
       page:
         type: integer
-        description: Which page of results you want.
+        description: |
+          Which page of results you want.
+
+          By default, Cannabis Reports will return 10 records at a time for the
+          strains API. You can use the page argument to fetch the page of
+          results you want.
+
+          Check out the pagination section of this documentation for more
+          information.
       sort:
-        type: string 
-        description: How you would like the results sorted.
+        type: string
+        description: |
+          How you would like the results sorted.
+
+          You can include a single sort option to get the records by when they
+          were updated, created, or alphabetically.
+
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Sort Option</th>
+                <th>Sort Direction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>createdAt</td>
+                <td>Oldest records.</td>
+              </tr>
+              <tr>
+                <td>-createdAt</td>
+                <td>Newest records.</td>
+              </tr>
+              <tr>
+                <td>updatedAt</td>
+                <td>Oldest updated records</td>
+              </tr>
+              <tr>
+                <td>-updatedAt</td>
+                <td>Newly updated records.</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>Alphabetically stating with numeric strains. 0-9, A-Z.</td>
+              </tr>
+              <tr>
+                <td>-name</td>
+                <td>Alphabetically starting with Z and working back through numeric
+                  strains. Z-A, 9-0.</td>
+              </tr>
+            </tbody>
+          </table>
+
     responses:
       200:
         body:
@@ -230,46 +279,232 @@ title: node-cannabis-reports
 
   /search:
     /{query}:
+      description: The strain search API can be used to find strains by name.
+        Search with at least 2 characters and get an array of strains to work
+        with.
+
       uriParameters:
         query:
           type: string
-          description: Search query to find strains in our system. Must be at least 2 characters.
+          description: Search query to find strains in our system. Must be at
+            least 2 characters.
+          example: "Blue"
           required: true
+
       get:
         description: Returns search results for strains in our database.
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page of
+              results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-search-200.js
+          400:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-search-400.js
   /{ucpc}:
     uriParameters:
       ucpc:
         type: string
         description: UCPC for the cannabis strain you want information about.
+        example: "VUJCJ4TYMG000000000000000"
         required: true
     get:
       description: Gets an individual strain based on the UCPC.
+
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/strains/strains-ucpc-200.js
+        400:
+          body:
+            application/json:
+              example: !include raml/data/strains/strains-ucpc-400.js
+
 
     /user:
       get:
         description: Get the user who added the strain to the database.
 
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-user-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
+
     /reviews:
       get:
         description: Get the reviews for a cannabis strain.
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page of
+              results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-review-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
 
     /effectsFlavors:
       get:
-        description: Get the average effects and flavors from reviews for this strain.
+        description: Get the average effects and flavors from reviews for this
+          strain.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-effectsFlavors-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
 
     /seedCompany:
       get:
-        description: Get the seed company that was responsible for a cannabis strain.
+        description: Get the seed company that was responsible for a cannabis
+          strain.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-seed-company-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
 
     /genetics:
+      description: |
+        More information on how to read and understand cannabis genetics can be
+        found in our FAQ:
+
+        https://www.cannabisreports.com/faq/cannabis-genetics/how-do-you-read-cannabis-genetics
+
+        This goes up the genetic family tree looking for the parents of the
+        strain. If you'd like to check out the children of a strain, see the
+        documentation for `/strain/:ucpc/children`.
       get:
-        description: Gets the strains that were the parent material for the strain with the given UCPC.
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page of
+              results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+
+        description: Gets the strains that were the parent material for the
+          strain with the given UCPC.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-genetics-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
 
     /children:
+      description: |
+        This will provide a paginated list of children that this strain was a
+        parent of. Some strains have been bred into hundreds of other ones.
+
+        For the parents of this strain, check out the `/strain/:ucpc/genetics`
+        documentation.
+
       get:
         description: Get the child strains that this one has been bred into.
 
-    /availability:
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-children-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js
+
+    /availability/geo/{lat}/{lng}/{radius}:
+      description: This will provide a paginated list of item summary objects
+        for this particular strain.
+      uriParameters:
+        lat:
+          type: string
+          example: 37.7749295
+          description: Latitude for the center of your availability search.
+          required: true
+        lng:
+          type: string
+          example: -122.4194155
+          description: Longitude for the center of your availability search.
+          required: true
+        radius:
+          type: integer
+          example: 10
+          description: Radius to search for in miles, max 25.
+
       get:
-        description: Get information about the availability of a strain using latitude and longitude.
+        queryParameters:
+          page:
+            type: integer
+            description: |
+              Which page of results you want.
+
+              By default, Cannabis Reports will return 10 records at a time for
+              the strains API. You can use the page argument to fetch the page of
+              results you want.
+
+              Check out the pagination section of this documentation for more
+              information.
+        description: Get information about the availability of a strain using
+          latitude and longitude.
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-availability-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/strains/strains-404.js

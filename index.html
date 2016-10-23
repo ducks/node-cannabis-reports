@@ -151,7 +151,7 @@
         word-wrap: normal;
         white-space: pre;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>node-cannabis-reports API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="strains" class="panel-title">Strains</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="strain-object">Strain object</h3><p><small>Cannabis strains in the Cannabis Reports system.</small></p><hr><p>Cannabis strains are the various cultivars available for the cannabis family. Thousands of years of human domestication and breeding of cannabis strains have resulted in a huge variety of attributes that we know and love today.</p><p><a href="http://en.wikipedia.org/wiki/Cultivar">http://en.wikipedia.org/wiki/Cultivar</a></p><p>Over time, strain names have been used by various companies in their attempts to recreate the results of other breeders. Cannabis Reports identifies strains not only by their name, but by their seed company as well, to ensure they are all properly represented.</p><h3 id="strain-attributes">Strain Attributes</h3><hr><table class="table table-bordered table-hover"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td><code>string</code></td><td>Name of the cannabis strain.</td></tr><tr><td>ucpc</td><td><code>string</code></td><td>UCPC code for this strain.</td></tr><tr><td>link</td><td><code>url</code></td><td>Link to the strain in the Cannabis Reports API.</td></tr><tr><td>qr</td><td><code>url</code></td><td>Link to the QR code for this strain.</td></tr><tr><td>url</td><td><code>url</code></td><td>Link to the strain listing on the Cannabis Reports website.</td></tr><tr><td>image</td><td><code>url</code></td><td>Link to the full size image for this strain on Cannabis Reports.</td></tr><tr><td>seedCompany</td><td><code>object</code></td><td>Information about the seed company that created or provides the strain.</td></tr><tr><td>seedCompany.name</td><td><code>string</code></td><td>Name of the seed company for the strain.</td></tr><tr><td>seedCompany.ucpc</td><td><code>string</code></td><td>UCPC for the seed company.</td></tr><tr><td>seedCompany.link</td><td><code>url</code></td><td>Link to the seed company for the strain in the Cannabis Reports API.</td></tr><tr><td>genetics</td><td><code>object</code></td><td>Object that holds information about the genetics for the strain.</td></tr><tr><td>genetics.names</td><td><code>string</code></td><td>The textual representation of the genetics for a strain.</td></tr><tr><td>genetics.ucpc</td><td><code>string</code></td><td>The genetics of a strain with UCPC codes instead of names. Delimiters in the genetic string are parentheses (), lower case "x", common slash /, and question mark ?. These characters will never be included within the UCPC.</td></tr><tr><td>genetics.link</td><td><code>url</code></td><td>Link to the genetics for the strain in the Cannabis Reports API.</td></tr><tr><td>lineage</td><td><code>object</code></td><td>Countries of origin for the genetics for the strain. Object keys are the country name and the values are the two character country codes.</td></tr><tr><td>children</td><td><code>object</code></td><td>Object that holds information about the children for the strain.</td></tr><tr><td>children.count</td><td><code>integer</code></td><td>Number of strains this one has been bred into.</td></tr><tr><td>children.link</td><td><code>url</code></td><td>Link to the children for the strain in the Cannabis Reports API.</td></tr><tr><td>reviews</td><td><code>object</code></td><td>Object that holds information about the reviews for the strain.</td></tr><tr><td>reviews.count</td><td><code>integer</code></td><td>Number of reviews for the strain.</td></tr><tr><td>reviews.link</td><td><code>url</code></td><td>Link to the reviews for the strain in the Cannabis Reports API.</td></tr><tr><td>createdAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was added.</td></tr><tr><td>updatedAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was updated.</td></tr></tbody></table><h3 id="where-s-indica-sativa-hybrid-">Where&#39;s Indica, Sativa, Hybrid?</h3><hr><p>Mainstream cannabis science does not subscribe to what has become a common classification scheme for identifying cannabis strains. There are differing opinions on the appropriate taxonomy of cannabis in the scientific community. Until there is consensus, Cannabis Reports does not participate in this type of classification.</p><p>Cannabis consumers have become used to associating feelings to these words which were previously used to describe physical or genetic characteristics of a plant.</p><p>To this effect, we have given producers the ability to classify their products as indica, sativa, and hybrid as it has become part of the common vocabulary. We have also allowed for strains to be listed on menus in ways that consumers have grown accustomed to, with most strains ending up in the "hybrid" category.</p><h3 id="where-are-the-thc-cbd-and-other-percentages-for-strains-">Where are the THC, CBD, and Other Percentages for Strains?</h3><hr><p>Results from cannabis labs on the percentage of THC and CBD content are based upon samples of the overall harvest for particular strains.</p><p>The cannabis plant contains hundreds of chemicals that interact together to provide the experience you have when you consume it. Science has shown that genetics of a strain can determine whether the disposition exists to produce the chemicals we measure for. However, the overall abundance of them in what you are consuming can vary depending on many factors:</p><ol><li>Skill of producer.</li><li>Environment.</li><li>Genetic phenotypes from seeds.</li><li>Part of plant consumed.</li><li>Processing.</li></ol><p>Cannabis Reports lets producers tie lab tests to individual products, batches of products, or flowers. For the overall information of a cannabis strain, however, we recognize that the actual results can vary from crop to crop.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains"><span class="parent"></span>/strains</a> <span class="methods"><a href="#strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of strains with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of strains with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_get_request" data-toggle="tab">Request</a></li><li><a href="#strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p></li></ul></div><div class="tab-pane" id="strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>node-cannabis-reports API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="strains" class="panel-title">Strains</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="strain-object">Strain object</h3><p><small>Cannabis strains in the Cannabis Reports system.</small></p><hr><p>Cannabis strains are the various cultivars available for the cannabis family. Thousands of years of human domestication and breeding of cannabis strains have resulted in a huge variety of attributes that we know and love today.</p><p><a href="http://en.wikipedia.org/wiki/Cultivar">http://en.wikipedia.org/wiki/Cultivar</a></p><p>Over time, strain names have been used by various companies in their attempts to recreate the results of other breeders. Cannabis Reports identifies strains not only by their name, but by their seed company as well, to ensure they are all properly represented.</p><h3 id="strain-attributes">Strain Attributes</h3><hr><table class="table table-bordered table-hover"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td><code>string</code></td><td>Name of the cannabis strain.</td></tr><tr><td>ucpc</td><td><code>string</code></td><td>UCPC code for this strain.</td></tr><tr><td>link</td><td><code>url</code></td><td>Link to the strain in the Cannabis Reports API.</td></tr><tr><td>qr</td><td><code>url</code></td><td>Link to the QR code for this strain.</td></tr><tr><td>url</td><td><code>url</code></td><td>Link to the strain listing on the Cannabis Reports website.</td></tr><tr><td>image</td><td><code>url</code></td><td>Link to the full size image for this strain on Cannabis Reports.</td></tr><tr><td>seedCompany</td><td><code>object</code></td><td>Information about the seed company that created or provides the strain.</td></tr><tr><td>seedCompany.name</td><td><code>string</code></td><td>Name of the seed company for the strain.</td></tr><tr><td>seedCompany.ucpc</td><td><code>string</code></td><td>UCPC for the seed company.</td></tr><tr><td>seedCompany.link</td><td><code>url</code></td><td>Link to the seed company for the strain in the Cannabis Reports API.</td></tr><tr><td>genetics</td><td><code>object</code></td><td>Object that holds information about the genetics for the strain.</td></tr><tr><td>genetics.names</td><td><code>string</code></td><td>The textual representation of the genetics for a strain.</td></tr><tr><td>genetics.ucpc</td><td><code>string</code></td><td>The genetics of a strain with UCPC codes instead of names. Delimiters in the genetic string are parentheses (), lower case "x", common slash /, and question mark ?. These characters will never be included within the UCPC.</td></tr><tr><td>genetics.link</td><td><code>url</code></td><td>Link to the genetics for the strain in the Cannabis Reports API.</td></tr><tr><td>lineage</td><td><code>object</code></td><td>Countries of origin for the genetics for the strain. Object keys are the country name and the values are the two character country codes.</td></tr><tr><td>children</td><td><code>object</code></td><td>Object that holds information about the children for the strain.</td></tr><tr><td>children.count</td><td><code>integer</code></td><td>Number of strains this one has been bred into.</td></tr><tr><td>children.link</td><td><code>url</code></td><td>Link to the children for the strain in the Cannabis Reports API.</td></tr><tr><td>reviews</td><td><code>object</code></td><td>Object that holds information about the reviews for the strain.</td></tr><tr><td>reviews.count</td><td><code>integer</code></td><td>Number of reviews for the strain.</td></tr><tr><td>reviews.link</td><td><code>url</code></td><td>Link to the reviews for the strain in the Cannabis Reports API.</td></tr><tr><td>createdAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was added.</td></tr><tr><td>updatedAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was updated.</td></tr></tbody></table><h3 id="where-s-indica-sativa-hybrid-">Where&#39;s Indica, Sativa, Hybrid?</h3><hr><p>Mainstream cannabis science does not subscribe to what has become a common classification scheme for identifying cannabis strains. There are differing opinions on the appropriate taxonomy of cannabis in the scientific community. Until there is consensus, Cannabis Reports does not participate in this type of classification.</p><p>Cannabis consumers have become used to associating feelings to these words which were previously used to describe physical or genetic characteristics of a plant.</p><p>To this effect, we have given producers the ability to classify their products as indica, sativa, and hybrid as it has become part of the common vocabulary. We have also allowed for strains to be listed on menus in ways that consumers have grown accustomed to, with most strains ending up in the "hybrid" category.</p><h3 id="where-are-the-thc-cbd-and-other-percentages-for-strains-">Where are the THC, CBD, and Other Percentages for Strains?</h3><hr><p>Results from cannabis labs on the percentage of THC and CBD content are based upon samples of the overall harvest for particular strains.</p><p>The cannabis plant contains hundreds of chemicals that interact together to provide the experience you have when you consume it. Science has shown that genetics of a strain can determine whether the disposition exists to produce the chemicals we measure for. However, the overall abundance of them in what you are consuming can vary depending on many factors:</p><ol><li>Skill of producer.</li><li>Environment.</li><li>Genetic phenotypes from seeds.</li><li>Part of plant consumed.</li><li>Processing.</li></ol><p>Cannabis Reports lets producers tie lab tests to individual products, batches of products, or flowers. For the overall information of a cannabis strain, however, we recognize that the actual results can vary from crop to crop.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains"><span class="parent"></span>/strains</a> <span class="methods"><a href="#strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of strains with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of strains with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_get_request" data-toggle="tab">Request</a></li><li><a href="#strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "data": [
     {
       "name": "501st OG",
@@ -209,4 +209,394 @@
   "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
   "status_code": 400
 }
-</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains_search__query_"><span class="parent">/strains/search</span>/{query}</a> <span class="methods"><a href="#strains_search__query__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains_search__query_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_search__query__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Returns search results for strains in our database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_search__query__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/search</span>/{query}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Returns search results for strains in our database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_search__query__get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_search__query__get_request"><h3>URI Parameters</h3><ul><li><strong>query</strong>: <em>required (string)</em><p>Search query to find strains in our system. Must be at least 2 characters.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc_"><span class="parent">/strains</span>/{ucpc}</a> <span class="methods"><a href="#strains__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual strain based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual strain based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__user"><span class="parent">/strains/{ucpc}</span>/user</a> <span class="methods"><a href="#strains__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the strain to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the strain to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__user_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__reviews"><span class="parent">/strains/{ucpc}</span>/reviews</a> <span class="methods"><a href="#strains__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__reviews_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__effectsFlavors"><span class="parent">/strains/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#strains__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__seedCompany"><span class="parent">/strains/{ucpc}</span>/seedCompany</a> <span class="methods"><a href="#strains__ucpc__seedCompany_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__seedCompany" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__seedCompany_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the seed company that was responsible for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__seedCompany_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/seedCompany</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the seed company that was responsible for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__seedCompany_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__seedCompany_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__genetics"><span class="parent">/strains/{ucpc}</span>/genetics</a> <span class="methods"><a href="#strains__ucpc__genetics_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__genetics" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__genetics_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__genetics_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/genetics</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__genetics_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__genetics_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__children"><span class="parent">/strains/{ucpc}</span>/children</a> <span class="methods"><a href="#strains__ucpc__children_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__children" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__children_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the child strains that this one has been bred into.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__children_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/children</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the child strains that this one has been bred into.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__children_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__children_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__availability"><span class="parent">/strains/{ucpc}</span>/availability</a> <span class="methods"><a href="#strains__ucpc__availability_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__availability" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__availability_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of a strain using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__availability_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/availability</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of a strain using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__availability_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__availability_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p></li></ul></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains_search__query_"><span class="parent">/strains/search</span>/{query}</a> <span class="methods"><a href="#strains_search__query__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains_search__query_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>The strain search API can be used to find strains by name. Search with at least 2 characters and get an array of strains to work with.</p></div><div class="list-group"><div onclick="window.location.href = '#strains_search__query__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Returns search results for strains in our database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_search__query__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/search</span>/{query}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Returns search results for strains in our database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_search__query__get_request" data-toggle="tab">Request</a></li><li><a href="#strains_search__query__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_search__query__get_request"><h3>URI Parameters</h3><ul><li><strong>query</strong>: <em>required (string)</em><p>Search query to find strains in our system. Must be at least 2 characters.</p><p><strong>Example</strong>:</p><pre>Blue</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="strains_search__query__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Blue",
+      "ucpc": "L2KQMTUFDH000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/L2KQMTUFDH000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/thc-seeds/blue/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/thc-seeds/blue",
+      "image": "https://www.cannabisreports.com/images/strains/c/full_c49ce8f893df7bd23711d6deb29a5159fca97b37.jpg",
+      "seedCompany": {
+        "name": "THC Seeds",
+        "ucpc": "L2KQM00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/L2KQM00000000000000000000"
+      },
+      "genetics": {
+        "names": false,
+        "ucpc": false,
+        "link": false
+      },
+      "lineage": [],
+      "children": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/L2KQMTUFDH000000000000000/children"
+      },
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/L2KQMTUFDH000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2008-08-15 19:20:00",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-06-08 03:36:59",
+        "timezone": "UTC"
+      }
+    },
+    { ... }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 232,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 24,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/strains/search/Blue?q=Blue&amp;page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid query. Query must be at least two characters.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc_"><span class="parent">/strains</span>/{ucpc}</a> <span class="methods"><a href="#strains__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual strain based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual strain based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul></div><div class="tab-pane" id="strains__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Jack Herer",
+    "ucpc": "VUJCJ4TYMG000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/jack-herer/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds/jack-herer",
+    "image": "https://www.cannabisreports.com/images/strains/a/full_ae82eef3bb2b7694df7f8bfa0da22a5d2b0f3689.jpg",
+    "seedCompany": {
+      "name": "Sensi Seeds",
+      "ucpc": "VUJCJ00000000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000"
+    },
+    "genetics": {
+      "names": "(Northern Lights #5 x Skunk #1) x Haze",
+      "ucpc": "(VUJCJ4MPQ2000000000000000 x VUJCJY6ZUC000000000000000) x 9XVU7WJQCD000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000/genetics"
+    },
+    "lineage": {
+      "Afghanistan": "AF",
+      "Colombia": "CO",
+      "India": "IN",
+      "Mexico": "MX",
+      "Thailand": "TH"
+    },
+    "children": {
+      "count": 94,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000/children"
+    },
+    "reviews": {
+      "count": 3,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2008-08-15 19:20:00",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-03-11 23:10:50",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__user"><span class="parent">/strains/{ucpc}</span>/user</a> <span class="methods"><a href="#strains__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the strain to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the strain to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__user_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__user_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul></div><div class="tab-pane" id="strains__ucpc__user_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "nickname": "David",
+    "link": "https://www.cannabisreports.com/api/v1.0/users/david",
+    "tagline": "The Original Smoke Reporter",
+    "url": "https://www.cannabisreports.com/user/profile/david",
+    "slug": "david",
+    "createdAt": {
+      "datetime": "2008-08-15 16:20:00",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-05-06 22:10:18",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__reviews"><span class="parent">/strains/{ucpc}</span>/reviews</a> <span class="methods"><a href="#strains__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="strains__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/323d4a3364f9d218ae13f71364b2297462878270",
+      "url": "https://www.cannabisreports.com/smoke-reports/2010/11/06/323d4a3364f9d218ae13f71364b2297462878270/smokinmama",
+      "euphoria": "7",
+      "creativity": null,
+      "pain_relief": null,
+      "appetite_gain": "4",
+      "calming": null,
+      "anxiety": "3",
+      "spicy": "7",
+      "earthy": "7",
+      "fruity": "2",
+      "sour": "3",
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2010-11-06 15:35:47",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-16 01:53:28",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 3,
+      "count": 3,
+      "per_page": 20,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__effectsFlavors"><span class="parent">/strains/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#strains__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__effectsFlavors_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul></div><div class="tab-pane" id="strains__ucpc__effectsFlavors_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "euphoria": "8.3333",
+    "creativity": "9.0000",
+    "calming": "6.0000",
+    "numbness": "7.6667",
+    "appetite_gain": "5.0000",
+    "dry_mouth": "5.0000",
+    "fruity": "5.0000",
+    "spicy": "5.5000",
+    "earthy": "5.5000",
+    "sour": "5.5000",
+    "sweet": "7.0000",
+    "pine": "4.0000",
+    "anxiety": "3.5000",
+    "reviews": 3
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__seedCompany"><span class="parent">/strains/{ucpc}</span>/seedCompany</a> <span class="methods"><a href="#strains__ucpc__seedCompany_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__seedCompany" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__seedCompany_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the seed company that was responsible for a cannabis strain.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__seedCompany_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/seedCompany</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the seed company that was responsible for a cannabis strain.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__seedCompany_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__seedCompany_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__seedCompany_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul></div><div class="tab-pane" id="strains__ucpc__seedCompany_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Sensi Seeds",
+    "ucpc": "VUJCJ00000000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds",
+    "image": "https://www.cannabisreports.com/images/profile/1/full_15fda07a135540c1de6afbb38dafe2113a11a7a4.jpg",
+    "lineage": {
+      "Afghanistan": "AF",
+      "Canada": "CA",
+      "Colombia": "CO",
+      "Hungary": "HU",
+      "India": "IN",
+      "Indonesia": "ID",
+      "Jamaica": "JM",
+      "Malawi": "MW",
+      "Mexico": "MX",
+      "Nepal": "NP",
+      "Nigeria": "NG",
+      "Pakistan": "PK",
+      "Panama": "PA",
+      "South Africa": "ZA",
+      "Thailand": "TH",
+      "United States": "US"
+    },
+    "strains": {
+      "count": 63,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/strains"
+    },
+    "reviews": {
+      "count": 25,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2014-04-09 09:29:57",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-01-08 20:05:52",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__genetics"><span class="parent">/strains/{ucpc}</span>/genetics</a> <span class="methods"><a href="#strains__ucpc__genetics_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__genetics" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>More information on how to read and understand cannabis genetics can be found in our FAQ:</p><p><a href="https://www.cannabisreports.com/faq/cannabis-genetics/how-do-you-read-cannabis-genetics">https://www.cannabisreports.com/faq/cannabis-genetics/how-do-you-read-cannabis-genetics</a></p><p>This goes up the genetic family tree looking for the parents of the strain. If you&#39;d like to check out the children of a strain, see the documentation for <code>/strain/:ucpc/children</code>.</p></div><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__genetics_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__genetics_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/genetics</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__genetics_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__genetics_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__genetics_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="strains__ucpc__genetics_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Afghani No. 1",
+      "ucpc": "D4C6CMREWV000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/D4C6CMREWV000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/sacred-seeds/afghani-no-1/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/sacred-seeds/afghani-no-1",
+      "image": "https://www.cannabisreports.com/images/strains/landraces/full-afghani-no-1.png",
+      "seedCompany": {
+        "name": "Sacred Seeds",
+        "ucpc": "D4C6C00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/D4C6C00000000000000000000"
+      },
+      "genetics": {
+        "names": "Landraces",
+        "ucpc": "9XVU7R9C3R000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/D4C6CMREWV000000000000000/genetics"
+      },
+      "lineage": {
+        "Afghanistan": "AF"
+      },
+      "children": {
+        "count": 19,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/D4C6CMREWV000000000000000/children"
+      },
+      "reviews": {
+        "count": 1,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/D4C6CMREWV000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2008-08-15 19:20:00",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-06-18 18:32:30",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ]
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__children"><span class="parent">/strains/{ucpc}</span>/children</a> <span class="methods"><a href="#strains__ucpc__children_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__children" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will provide a paginated list of children that this strain was a parent of. Some strains have been bred into hundreds of other ones.</p><p>For the parents of this strain, check out the <code>/strain/:ucpc/genetics</code> documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__children_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the child strains that this one has been bred into.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__children_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/children</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the child strains that this one has been bred into.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__children_get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__children_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__children_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li></ul></div><div class="tab-pane" id="strains__ucpc__children_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Jack Flash",
+      "ucpc": "VUJCJEZHC6000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJEZHC6000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/jack-flash/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds/jack-flash",
+      "image": "https://www.cannabisreports.com/images/strains/5/full_5b7bacfc57a26d02ba3f7ee85c46d70f845868ee.jpg",
+      "seedCompany": {
+        "name": "Sensi Seeds",
+        "ucpc": "VUJCJ00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000"
+      },
+      "genetics": {
+        "names": "Jack Herer x (Super Skunk x Haze)",
+        "ucpc": "VUJCJ4TYMG000000000000000 x (2NGAWPEK4A000000000000000 x 9XVU7WJQCD000000000000000)",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJEZHC6000000000000000/genetics"
+      },
+      "lineage": {
+        "Afghanistan": "AF",
+        "Colombia": "CO",
+        "India": "IN",
+        "Mexico": "MX",
+        "Thailand": "TH"
+      },
+      "children": {
+        "count": 3,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJEZHC6000000000000000/children"
+      },
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJEZHC6000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2008-08-15 19:20:00",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-06-07 13:04:14",
+        "timezone": "UTC"
+      }
+    },
+    { ... }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 94,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 10,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000/children?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains__ucpc__availability_geo__lat___lng___radius_"><span class="parent">/strains/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</a> <span class="methods"><a href="#strains__ucpc__availability_geo__lat___lng___radius__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains__ucpc__availability_geo__lat___lng___radius_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will provide a paginated list of item summary objects for this particular strain.</p></div><div class="list-group"><div onclick="window.location.href = '#strains__ucpc__availability_geo__lat___lng___radius__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of a strain using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains__ucpc__availability_geo__lat___lng___radius__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/strains/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of a strain using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains__ucpc__availability_geo__lat___lng___radius__get_request" data-toggle="tab">Request</a></li><li><a href="#strains__ucpc__availability_geo__lat___lng___radius__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains__ucpc__availability_geo__lat___lng___radius__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis strain you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ4TYMG000000000000000</pre></li><li><strong>lat</strong>: <em>required (string)</em><p>Latitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>37.7749295</pre></li><li><strong>lng</strong>: <em>required (string)</em><p>Longitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>-122.4194155</pre></li><li><strong>radius</strong>: <em>required (integer)</em><p>Radius to search for in miles, max 25.</p><p><strong>Example</strong>:</p><pre><code>10</code></pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="strains__ucpc__availability_geo__lat___lng___radius__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Jack Herer",
+      "ucpc": "VUJCJ4TYMG000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000",
+      "type": "strain",
+      "location": {
+        "name": "Love Shack Cooperative",
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/love-shack-cooperative",
+        "lat": "37.7681384",
+        "lng": "-122.4246791"
+      },
+      "price": null,
+      "price_half_gram": null,
+      "price_gram": "10.00",
+      "price_eighth": "35.00",
+      "price_quarter": "70.00",
+      "price_half_ounce": "135.00",
+      "price_ounce": "265.00",
+      "createdAt": {
+        "datetime": "2014-05-20 18:31:40",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-21 04:56:23",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 10,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li></ul></div></div></div></div></body></html>
