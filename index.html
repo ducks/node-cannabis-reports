@@ -961,4 +961,362 @@
   "message": "Not found. Could not find a strain with that UCPC.",
   "status_code": 404
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="extracts" class="panel-title">Extracts</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="extract-object">Extract Object</h3><p><small>Cannabis extracts in the Cannabis Reports system.</small></p><hr><p>Cannabis extracts are created from the flowers of the cannabis plant. Various methods for creating cannabis extracts have been perfected over thousands of years.</p><p>Cannabis Reports recognizes 10 main types of extracts:</p><ul><li>Kief</li><li>Hash</li><li>Water-Hash</li><li>Oil</li><li>Wax</li><li>Crumble</li><li>Honeycomb</li><li>Shatter</li><li>Vaporizer-Disposable</li><li>Vaporizer-Cartridge</li></ul><p>Each extract is tied to a strain and the producer who created it. For more information about cannabis extracts, check out our FAQ here:</p><p><a href="https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-extract">https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-extract</a></p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the extract including the name of the <a>strain</a> and the type of extract.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this extract.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the extract in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this extract.</p></div></td></tr><tr><td><div><p>barcode</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the barcode for this extract.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the extract listing on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this extract. If none has been uploaded, this links to a generic image for this type of extract.</p></div></td></tr><tr><td><div><p>producer</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Information about the <a>producer</a> that created the extract.</p></div></td></tr><tr><td><div><p>producer.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>producer</a> of the extract.</p></div></td></tr><tr><td><div><p>producer.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> for the <a>producer</a>.</p></div></td></tr><tr><td><div><p>producer.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>producer</a> in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Type of cannabis extract.</p></div></td></tr><tr><td><div><p>strain</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p><a>Strain</a> that this extract comes from.</p></div></td></tr><tr><td><div><p>strain.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>strain</a> this extract comes from.</p></div></td></tr><tr><td><div><p>strain.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> of the <a>strain</a> this extract comes from.</p></div></td></tr><tr><td><div><p>strain.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strain</a> this extract comes from in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>labTest</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the PDF containing lab test information for this extract.</p></div></td></tr><tr><td><div><p>thc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>THC</a> in this extract.</p></div></td></tr><tr><td><div><p>cbd</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>CBD</a> in this extract.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for the extract.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of reviews for the extract.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the reviews for the extract.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the extract was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the extract was updated.</p></div></td></tr></tbody></table><h3 id="explore-extract-endpoints">Explore Extract Endpoints</h3><hr><p><small>Here are some of the results available from the different extract endpoints</small></p><table><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/extracts</a></p></div></td><td><div><p>Gets a paginated list of extracts with optional sorting.</p></div></td></tr><tr><td><div><p><a>/extracts/type/:extractType</a></p></div></td><td><div><p>Gets a paginated list of extracts with optional sorting.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc</a></p></div></td><td><div><p>Gets an individual extract based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/reviews</a></p></div></td><td><div><p>Get the reviews for a cannabis extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/effectsFlavors</a></p></div></td><td><div><p>Get the average effects and flavors from reviews for this extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/producer</a></p></div></td><td><div><p>Gets the producer for a given extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/strain</a></p></div></td><td><div><p>Gets the information about a strain for an extract with the given UCPC.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/availability/geo/:lat/:lng/:radius</a></p></div></td><td><div><p>Get information about the availability of an extract using latitude and longitude.</p></div></td></tr></tbody></table></div><div class="panel-group"></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="extracts" class="panel-title">Extracts</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="extract-object">Extract Object</h3><p><small>Cannabis extracts in the Cannabis Reports system.</small></p><hr><p>Cannabis extracts are created from the flowers of the cannabis plant. Various methods for creating cannabis extracts have been perfected over thousands of years.</p><p>Cannabis Reports recognizes 10 main types of extracts:</p><ul><li>Kief</li><li>Hash</li><li>Water-Hash</li><li>Oil</li><li>Wax</li><li>Crumble</li><li>Honeycomb</li><li>Shatter</li><li>Vaporizer-Disposable</li><li>Vaporizer-Cartridge</li></ul><p>Each extract is tied to a strain and the producer who created it. For more information about cannabis extracts, check out our FAQ here:</p><p><a href="https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-extract">https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-extract</a></p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the extract including the name of the <a>strain</a> and the type of extract.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this extract.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the extract in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this extract.</p></div></td></tr><tr><td><div><p>barcode</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the barcode for this extract.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the extract listing on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this extract. If none has been uploaded, this links to a generic image for this type of extract.</p></div></td></tr><tr><td><div><p>producer</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Information about the <a>producer</a> that created the extract.</p></div></td></tr><tr><td><div><p>producer.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>producer</a> of the extract.</p></div></td></tr><tr><td><div><p>producer.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> for the <a>producer</a>.</p></div></td></tr><tr><td><div><p>producer.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>producer</a> in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Type of cannabis extract.</p></div></td></tr><tr><td><div><p>strain</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p><a>Strain</a> that this extract comes from.</p></div></td></tr><tr><td><div><p>strain.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>strain</a> this extract comes from.</p></div></td></tr><tr><td><div><p>strain.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> of the <a>strain</a> this extract comes from.</p></div></td></tr><tr><td><div><p>strain.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strain</a> this extract comes from in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>labTest</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the PDF containing lab test information for this extract.</p></div></td></tr><tr><td><div><p>thc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>THC</a> in this extract.</p></div></td></tr><tr><td><div><p>cbd</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>CBD</a> in this extract.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for the extract.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of reviews for the extract.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the reviews for the extract.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the extract was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the extract was updated.</p></div></td></tr></tbody></table><h3 id="explore-extract-endpoints">Explore Extract Endpoints</h3><hr><p><small>Here are some of the results available from the different extract endpoints</small></p><table class="table table-bordered table-hover"><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/extracts</a></p></div></td><td><div><p>Gets a paginated list of extracts with optional sorting.</p></div></td></tr><tr><td><div><p><a>/extracts/type/:extractType</a></p></div></td><td><div><p>Gets a paginated list of extracts with optional sorting.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc</a></p></div></td><td><div><p>Gets an individual extract based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/reviews</a></p></div></td><td><div><p>Get the reviews for a cannabis extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/effectsFlavors</a></p></div></td><td><div><p>Get the average effects and flavors from reviews for this extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/producer</a></p></div></td><td><div><p>Gets the producer for a given extract.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/strain</a></p></div></td><td><div><p>Gets the information about a strain for an extract with the given UCPC.</p></div></td></tr><tr><td><div><p><a>/extracts/:ucpc/availability/geo/:lat/:lng/:radius</a></p></div></td><td><div><p>Get information about the availability of an extract using latitude and longitude.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts"><span class="parent"></span>/extracts</a> <span class="methods"><a href="#extracts_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of extracts with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/extracts</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of extracts with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="extracts_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Plane Wreck - Wax",
+      "ucpc": "9XVU7GY6KE2WJVPYV3VX00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/extracts/9XVU7GY6KE2WJVPYV3VX00000",
+      "qr": "https://www.cannabisreports.com/extract-reports/qr-code/unknown-producer/unknown-breeder/plane-wreck/wax.png",
+      "barcode": "https://www.cannabisreports.com/extract-reports/barcode/unknown-producer/unknown-breeder/plane-wreck/wax.png",
+      "url": "https://www.cannabisreports.com/extract-reports/unknown-producer/unknown-breeder/plane-wreck/wax",
+      "image": "https://www.cannabisreports.com/images/extracts/wax.jpg",
+      "producer": {
+        "name": "Unknown Producer",
+        "ucpc": "00000000002WJVP0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000002WJVP0000000000"
+      },
+      "type": "wax",
+      "strain": {
+        "name": "Plane Wreck",
+        "ucpc": "9XVU7GY6KE000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU7GY6KE000000000000000"
+      },
+      "labTest": false,
+      "thc": false,
+      "cbd": false,
+      "reviews": 0,
+      "createdAt": {
+        "datetime": "2015-05-06 21:25:47",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-05-06 21:25:48",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 3852,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 386,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/extracts?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/extracts?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts_type__extractType_"><span class="parent">/extracts</span>/type/{extractType}</a> <span class="methods"><a href="#extracts_type__extractType__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts_type__extractType_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts_type__extractType__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of extracts with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts_type__extractType__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts</span>/type/{extractType}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of extracts with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts_type__extractType__get_request" data-toggle="tab">Request</a></li><li><a href="#extracts_type__extractType__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts_type__extractType__get_request"><h3>URI Parameters</h3><ul><li><strong>extractType</strong>: <em>required (string)</em><p>One of the various types of extracts you would like to filter by. Acceptable types are:</p><ul><li>Kief</li><li>Hash</li><li>Water-Hash</li><li>Oil</li><li>Wax</li><li>Crumble</li><li>Honeycomb</li><li>Shatter</li><li>Vaporizer-Disposable</li><li>Vaporizer-Cartridge</li></ul><p><strong>Example</strong>:</p><pre>shatter</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="extracts_type__extractType__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Sour Diesel - Shatter",
+      "ucpc": "9XVU7KVPFZTMVC3L4Z4900000",
+      "link": "https://www.cannabisreports.com/api/v1.0/extracts/9XVU7KVPFZTMVC3L4Z4900000",
+      "qr": "https://www.cannabisreports.com/extract-reports/qr-code/flower-of-life-extracts/unknown-breeder/sour-diesel/shatter.png",
+      "barcode": "https://www.cannabisreports.com/extract-reports/barcode/flower-of-life-extracts/unknown-breeder/sour-diesel/shatter.png",
+      "url": "https://www.cannabisreports.com/extract-reports/flower-of-life-extracts/unknown-breeder/sour-diesel/shatter",
+      "image": "https://www.cannabisreports.com/images/extracts/c/full_cfcf09cc1e10f751fa52226ac4a7a52f138459d4.jpg",
+      "producer": {
+        "name": "Flower of Life Extracts",
+        "ucpc": "0000000000TMVC30000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TMVC30000000000"
+      },
+      "type": "shatter",
+      "strain": {
+        "name": "Sour Diesel",
+        "ucpc": "9XVU7KVPFZ000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU7KVPFZ000000000000000"
+      },
+      "labTest": false,
+      "thc": false,
+      "cbd": false,
+      "reviews": 0,
+      "createdAt": {
+        "datetime": "2015-05-06 18:08:22",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-05-06 18:08:22",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 909,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 91,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/extracts/type/shatter?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/extracts/type/shatter?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc_"><span class="parent">/extracts</span>/{ucpc}</a> <span class="methods"><a href="#extracts__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual extract based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual extract based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Jesus OG - Shatter",
+    "ucpc": "3CV7E33XLHTJT2XZ4GMD00000",
+    "link": "https://www.cannabisreports.com/api/v1.0/extracts/3CV7E33XLHTJT2XZ4GMD00000",
+    "qr": "https://www.cannabisreports.com/extract-reports/qr-code/hgh-extractions/tga-seeds/jesus-og/shatter.png",
+    "barcode": "https://www.cannabisreports.com/extract-reports/barcode/hgh-extractions/tga-seeds/jesus-og/shatter.png",
+    "url": "https://www.cannabisreports.com/extract-reports/hgh-extractions/tga-seeds/jesus-og/shatter",
+    "image": "https://www.cannabisreports.com/images/extracts/shatter.jpg",
+    "producer": {
+      "name": "HGH Extractions",
+      "ucpc": "0000000000TJT2X0000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000"
+    },
+    "type": "shatter",
+    "strain": {
+      "name": "Jesus OG",
+      "ucpc": "3CV7E33XLH000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/3CV7E33XLH000000000000000"
+    },
+    "labTest": false,
+    "thc": false,
+    "cbd": false,
+    "reviews": 0,
+    "createdAt": {
+      "datetime": "2015-04-22 22:43:07",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-04-22 22:43:08",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__user"><span class="parent">/extracts/{ucpc}</span>/user</a> <span class="methods"><a href="#extracts__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the extract to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the extract to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__user_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__user_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__user_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "nickname": "Untamed Dame",
+    "link": "https://www.cannabisreports.com/api/v1.0/users/untamed-dame",
+    "tagline": "Let&#39;s get weird.",
+    "url": "https://www.cannabisreports.com/user/profile/untamed-dame",
+    "slug": "untamed-dame",
+    "createdAt": {
+      "datetime": "2014-12-07 23:30:37",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-04-22 18:24:18",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__reviews"><span class="parent">/extracts/{ucpc}</span>/reviews</a> <span class="methods"><a href="#extracts__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis extract.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis extract.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="extracts__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/2e417f316a1f1101c8eb9ba6f63c9f994e9436ac",
+      "url": "https://www.cannabisreports.com/smoke-reports/2015/04/02/2e417f316a1f1101c8eb9ba6f63c9f994e9436ac/doc-chillington",
+      "euphoria": "6",
+      "creativity": "8",
+      "pain_relief": null,
+      "appetite_gain": "6",
+      "calming": "4",
+      "anxiety": null,
+      "spicy": "2",
+      "earthy": "6",
+      "fruity": null,
+      "sour": null,
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2015-04-02 23:58:25",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-02 23:58:25",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 1,
+      "count": 1,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__effectsFlavors"><span class="parent">/extracts/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#extracts__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this extract.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this extract.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__effectsFlavors_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__effectsFlavors_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "euphoria": "6.0000",
+    "creativity": "8.0000",
+    "calming": "4.0000",
+    "numbness": "4.0000",
+    "appetite_gain": "6.0000",
+    "dry_mouth": "6.0000",
+    "fruity": null,
+    "spicy": "2.0000",
+    "earthy": "6.0000",
+    "sour": null,
+    "sweet": null,
+    "pine": null,
+    "anxiety": null,
+    "reviews": 1
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__producer"><span class="parent">/extracts/{ucpc}</span>/producer</a> <span class="methods"><a href="#extracts__ucpc__producer_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__producer" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Extracts in the Cannabis Reports system have a producer associated with them. Some dispensaries are not yet listing the company that produced their extracts for their menus. For those extracts, an "Unknown Producer" has been associated. Trying to get information about his producer will give you the UCPC and name with nothing more.</p><p>More information about the various fields for the producer can be found in the cannabis producer object definition section.</p></div><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__producer_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the producer for a given extract.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__producer_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/producer</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the producer for a given extract.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__producer_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__producer_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__producer_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__producer_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "HGH Extractions",
+    "ucpc": "0000000000TJT2X0000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000",
+    "qr": "https://www.cannabisreports.com/producer-reports/hgh-extractions/qr-code",
+    "url": "https://www.cannabisreports.com/producer-reports/hgh-extractions",
+    "image": "https://www.cannabisreports.com/images/profile/3/full_3726c52929c5e9424a0539c12ac215305b0d3cc2.jpg",
+    "reviews": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000/reviews"
+    },
+    "extracts": {
+      "count": 88,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000/extracts"
+    },
+    "edibles": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000/edibles"
+    },
+    "products": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000TJT2X0000000000/products"
+    },
+    "createdAt": {
+      "datetime": "2014-07-14 20:15:37",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2014-10-14 21:30:08",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__strain"><span class="parent">/extracts/{ucpc}</span>/strain</a> <span class="methods"><a href="#extracts__ucpc__strain_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__strain" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__strain_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the information about a strain for an extract with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__strain_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/strain</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the information about a strain for an extract with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__strain_get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__strain_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__strain_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li></ul></div><div class="tab-pane" id="extracts__ucpc__strain_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Ogre Berry",
+    "ucpc": "9XVU74N646000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4",
+    "image": "https://www.cannabisreports.com/images/strains/8/full_8dd6dbd49b15125172a96219086f81246e1ae15b.jpg",
+    "seedCompany": {
+      "name": "HappyDay Farms",
+      "ucpc": "AHZ7H00000000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/AHZ7H00000000000000000000"
+    },
+    "genetics": {
+      "names": "Ogre x Island Mountain Strawberry Afghani",
+      "ucpc": "9XVU7U9HUK000000000000000 x 9XVU7D492Z000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/genetics"
+    },
+    "lineage": [],
+    "children": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/children"
+    },
+    "reviews": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2015-07-29 18:11:45",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-12-09 23:07:38",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_extracts__ucpc__availability_geo__lat___lng___radius_"><span class="parent">/extracts/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</a> <span class="methods"><a href="#extracts__ucpc__availability_geo__lat___lng___radius__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_extracts__ucpc__availability_geo__lat___lng___radius_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will provide a paginated list of item summary objects for this particular strain.</p></div><div class="list-group"><div onclick="window.location.href = '#extracts__ucpc__availability_geo__lat___lng___radius__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of an extract using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="extracts__ucpc__availability_geo__lat___lng___radius__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/extracts/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of an extract using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#extracts__ucpc__availability_geo__lat___lng___radius__get_request" data-toggle="tab">Request</a></li><li><a href="#extracts__ucpc__availability_geo__lat___lng___radius__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="extracts__ucpc__availability_geo__lat___lng___radius__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis extract you want information about.</p><p><strong>Example</strong>:</p><pre>3CV7E33XLHTJT2XZ4GMD00000</pre></li><li><strong>lat</strong>: <em>required (string)</em><p>Latitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>37.7749295</pre></li><li><strong>lng</strong>: <em>required (string)</em><p>Longitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>-122.4194155</pre></li><li><strong>radius</strong>: <em>required (integer)</em><p>Radius to search for in miles, max 25.</p><p><strong>Example</strong>:</p><pre><code>10</code></pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="extracts__ucpc__availability_geo__lat___lng___radius__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Cherry Pie (Cherry Kush) - Vaporizer Cartridge",
+      "ucpc": "9XVU7ZCENQVU7TGRFHPC00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/extracts/9XVU7ZCENQVU7TGRFHPC00000",
+      "type": "extract",
+      "location": {
+        "name": "SFFOGG",
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/sffogg",
+        "lat": "37.7717311",
+        "lng": "-122.4165409"
+      },
+      "price": null,
+      "price_half_gram": "0.00",
+      "price_gram": "40.00",
+      "price_eighth": null,
+      "price_quarter": null,
+      "price_half_ounce": null,
+      "price_ounce": null,
+      "createdAt": {
+        "datetime": "2014-05-20 21:29:37",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-21 04:53:05",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 16,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 2,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/extracts/9XVU7ZCENQVU7TGRFHPC00000/availability/geo/37.7749295/-122.4194155/25?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find an extract with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li></ul></div></div></div></div></body></html>
