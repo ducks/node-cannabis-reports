@@ -151,7 +151,7 @@
         word-wrap: normal;
         white-space: pre;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>node-cannabis-reports API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="strains" class="panel-title">Strains</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="strain-object">Strain object</h3><p><small>Cannabis strains in the Cannabis Reports system.</small></p><hr><p>Cannabis strains are the various cultivars available for the cannabis family. Thousands of years of human domestication and breeding of cannabis strains have resulted in a huge variety of attributes that we know and love today.</p><p><a href="http://en.wikipedia.org/wiki/Cultivar">http://en.wikipedia.org/wiki/Cultivar</a></p><p>Over time, strain names have been used by various companies in their attempts to recreate the results of other breeders. Cannabis Reports identifies strains not only by their name, but by their seed company as well, to ensure they are all properly represented.</p><h3 id="strain-attributes">Strain Attributes</h3><hr><table class="table table-bordered table-hover"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td><code>string</code></td><td>Name of the cannabis strain.</td></tr><tr><td>ucpc</td><td><code>string</code></td><td>UCPC code for this strain.</td></tr><tr><td>link</td><td><code>url</code></td><td>Link to the strain in the Cannabis Reports API.</td></tr><tr><td>qr</td><td><code>url</code></td><td>Link to the QR code for this strain.</td></tr><tr><td>url</td><td><code>url</code></td><td>Link to the strain listing on the Cannabis Reports website.</td></tr><tr><td>image</td><td><code>url</code></td><td>Link to the full size image for this strain on Cannabis Reports.</td></tr><tr><td>seedCompany</td><td><code>object</code></td><td>Information about the seed company that created or provides the strain.</td></tr><tr><td>seedCompany.name</td><td><code>string</code></td><td>Name of the seed company for the strain.</td></tr><tr><td>seedCompany.ucpc</td><td><code>string</code></td><td>UCPC for the seed company.</td></tr><tr><td>seedCompany.link</td><td><code>url</code></td><td>Link to the seed company for the strain in the Cannabis Reports API.</td></tr><tr><td>genetics</td><td><code>object</code></td><td>Object that holds information about the genetics for the strain.</td></tr><tr><td>genetics.names</td><td><code>string</code></td><td>The textual representation of the genetics for a strain.</td></tr><tr><td>genetics.ucpc</td><td><code>string</code></td><td>The genetics of a strain with UCPC codes instead of names. Delimiters in the genetic string are parentheses (), lower case "x", common slash /, and question mark ?. These characters will never be included within the UCPC.</td></tr><tr><td>genetics.link</td><td><code>url</code></td><td>Link to the genetics for the strain in the Cannabis Reports API.</td></tr><tr><td>lineage</td><td><code>object</code></td><td>Countries of origin for the genetics for the strain. Object keys are the country name and the values are the two character country codes.</td></tr><tr><td>children</td><td><code>object</code></td><td>Object that holds information about the children for the strain.</td></tr><tr><td>children.count</td><td><code>integer</code></td><td>Number of strains this one has been bred into.</td></tr><tr><td>children.link</td><td><code>url</code></td><td>Link to the children for the strain in the Cannabis Reports API.</td></tr><tr><td>reviews</td><td><code>object</code></td><td>Object that holds information about the reviews for the strain.</td></tr><tr><td>reviews.count</td><td><code>integer</code></td><td>Number of reviews for the strain.</td></tr><tr><td>reviews.link</td><td><code>url</code></td><td>Link to the reviews for the strain in the Cannabis Reports API.</td></tr><tr><td>createdAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was added.</td></tr><tr><td>updatedAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was updated.</td></tr></tbody></table><h3 id="where-s-indica-sativa-hybrid-">Where&#39;s Indica, Sativa, Hybrid?</h3><hr><p>Mainstream cannabis science does not subscribe to what has become a common classification scheme for identifying cannabis strains. There are differing opinions on the appropriate taxonomy of cannabis in the scientific community. Until there is consensus, Cannabis Reports does not participate in this type of classification.</p><p>Cannabis consumers have become used to associating feelings to these words which were previously used to describe physical or genetic characteristics of a plant.</p><p>To this effect, we have given producers the ability to classify their products as indica, sativa, and hybrid as it has become part of the common vocabulary. We have also allowed for strains to be listed on menus in ways that consumers have grown accustomed to, with most strains ending up in the "hybrid" category.</p><h3 id="where-are-the-thc-cbd-and-other-percentages-for-strains-">Where are the THC, CBD, and Other Percentages for Strains?</h3><hr><p>Results from cannabis labs on the percentage of THC and CBD content are based upon samples of the overall harvest for particular strains.</p><p>The cannabis plant contains hundreds of chemicals that interact together to provide the experience you have when you consume it. Science has shown that genetics of a strain can determine whether the disposition exists to produce the chemicals we measure for. However, the overall abundance of them in what you are consuming can vary depending on many factors:</p><ol><li>Skill of producer.</li><li>Environment.</li><li>Genetic phenotypes from seeds.</li><li>Part of plant consumed.</li><li>Processing.</li></ol><p>Cannabis Reports lets producers tie lab tests to individual products, batches of products, or flowers. For the overall information of a cannabis strain, however, we recognize that the actual results can vary from crop to crop.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains"><span class="parent"></span>/strains</a> <span class="methods"><a href="#strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of strains with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of strains with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_get_request" data-toggle="tab">Request</a></li><li><a href="#strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>node-cannabis-reports API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="strains" class="panel-title">Strains</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="strain-object">Strain object</h3><p><small>Cannabis strains in the Cannabis Reports system.</small></p><hr><p>Cannabis strains are the various cultivars available for the cannabis family. Thousands of years of human domestication and breeding of cannabis strains have resulted in a huge variety of attributes that we know and love today.</p><p><a href="http://en.wikipedia.org/wiki/Cultivar">http://en.wikipedia.org/wiki/Cultivar</a></p><p>Over time, strain names have been used by various companies in their attempts to recreate the results of other breeders. Cannabis Reports identifies strains not only by their name, but by their seed company as well, to ensure they are all properly represented.</p><h3 id="strain-attributes">Strain Attributes</h3><hr><table class="table table-bordered table-hover"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td><code>string</code></td><td>Name of the cannabis strain.</td></tr><tr><td>ucpc</td><td><code>string</code></td><td>UCPC code for this strain.</td></tr><tr><td>link</td><td><code>url</code></td><td>Link to the strain in the Cannabis Reports API.</td></tr><tr><td>qr</td><td><code>url</code></td><td>Link to the QR code for this strain.</td></tr><tr><td>url</td><td><code>url</code></td><td>Link to the strain listing on the Cannabis Reports website.</td></tr><tr><td>image</td><td><code>url</code></td><td>Link to the full size image for this strain on Cannabis Reports.</td></tr><tr><td>seedCompany</td><td><code>object</code></td><td>Information about the seed company that created or provides the strain.</td></tr><tr><td>seedCompany.name</td><td><code>string</code></td><td>Name of the seed company for the strain.</td></tr><tr><td>seedCompany.ucpc</td><td><code>string</code></td><td>UCPC for the seed company.</td></tr><tr><td>seedCompany.link</td><td><code>url</code></td><td>Link to the seed company for the strain in the Cannabis Reports API.</td></tr><tr><td>genetics</td><td><code>object</code></td><td>Object that holds information about the genetics for the strain.</td></tr><tr><td>genetics.names</td><td><code>string</code></td><td>The textual representation of the genetics for a strain.</td></tr><tr><td>genetics.ucpc</td><td><code>string</code></td><td>The genetics of a strain with UCPC codes instead of names. Delimiters in the genetic string are parentheses (), lower case "x", common slash /, and question mark ?. These characters will never be included within the UCPC.</td></tr><tr><td>genetics.link</td><td><code>url</code></td><td>Link to the genetics for the strain in the Cannabis Reports API.</td></tr><tr><td>lineage</td><td><code>object</code></td><td>Countries of origin for the genetics for the strain. Object keys are the country name and the values are the two character country codes.</td></tr><tr><td>children</td><td><code>object</code></td><td>Object that holds information about the children for the strain.</td></tr><tr><td>children.count</td><td><code>integer</code></td><td>Number of strains this one has been bred into.</td></tr><tr><td>children.link</td><td><code>url</code></td><td>Link to the children for the strain in the Cannabis Reports API.</td></tr><tr><td>reviews</td><td><code>object</code></td><td>Object that holds information about the reviews for the strain.</td></tr><tr><td>reviews.count</td><td><code>integer</code></td><td>Number of reviews for the strain.</td></tr><tr><td>reviews.link</td><td><code>url</code></td><td>Link to the reviews for the strain in the Cannabis Reports API.</td></tr><tr><td>createdAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was added.</td></tr><tr><td>updatedAt</td><td><code>object</code></td><td>Object containing two strings, "dateTime" and the "timezone" when the strain was updated.</td></tr></tbody></table><h3 id="where-s-indica-sativa-hybrid-">Where&#39;s Indica, Sativa, Hybrid?</h3><hr><p>Mainstream cannabis science does not subscribe to what has become a common classification scheme for identifying cannabis strains. There are differing opinions on the appropriate taxonomy of cannabis in the scientific community. Until there is consensus, Cannabis Reports does not participate in this type of classification.</p><p>Cannabis consumers have become used to associating feelings to these words which were previously used to describe physical or genetic characteristics of a plant.</p><p>To this effect, we have given producers the ability to classify their products as indica, sativa, and hybrid as it has become part of the common vocabulary. We have also allowed for strains to be listed on menus in ways that consumers have grown accustomed to, with most strains ending up in the "hybrid" category.</p><h3 id="where-are-the-thc-cbd-and-other-percentages-for-strains-">Where are the THC, CBD, and Other Percentages for Strains?</h3><hr><p>Results from cannabis labs on the percentage of THC and CBD content are based upon samples of the overall harvest for particular strains.</p><p>The cannabis plant contains hundreds of chemicals that interact together to provide the experience you have when you consume it. Science has shown that genetics of a strain can determine whether the disposition exists to produce the chemicals we measure for. However, the overall abundance of them in what you are consuming can vary depending on many factors:</p><ol><li>Skill of producer.</li><li>Environment.</li><li>Genetic phenotypes from seeds.</li><li>Part of plant consumed.</li><li>Processing.</li></ol><p>Cannabis Reports lets producers tie lab tests to individual products, batches of products, or flowers. For the overall information of a cannabis strain, however, we recognize that the actual results can vary from crop to crop.</p><h3 id="explore-strain-endpoints">Explore Strain Endpoints</h3><p><hr></p><smaller>Here are some of the results available from the different strain endpoints</smaller><table class="table table-bordered table-hover"><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/strains</a></p></div></td><td><div><p>Gets a paginated list of strains with optional sorting.</p></div></td></tr><tr><td><div><p><a>/strains/search/:query</a></p></div></td><td><div><p>Returns search results for strains in our database.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc</a></p></div></td><td><div><p>Gets an individual strain based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/reviews</a></p></div></td><td><div><p>Gets the reviews for a cannabis strain.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/effectsFlavors</a></p></div></td><td><div><p>Gets the average effects and flavors from reviews for this strain.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/seedCompany</a></p></div></td><td><div><p>Gets the seed company that was responsible for a cannabis strain.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/genetics</a></p></div></td><td><div><p>Gets the strains that were the parent material for the strain with the given UCPC.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/children</a></p></div></td><td><div><p>Gets the child strains that this one has been bred into.</p></div></td></tr><tr><td><div><p><a>/strains/:ucpc/availability/geo/:lat/:lng/:radius</a></p></div></td><td><div><p>Gets information about the availability of a strain using latitude and longitude.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_strains"><span class="parent"></span>/strains</a> <span class="methods"><a href="#strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_strains" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of strains with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of strains with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#strains_get_request" data-toggle="tab">Request</a></li><li><a href="#strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="strains_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   "data": [
     {
       "name": "501st OG",
@@ -599,4 +599,366 @@
   "message": "Not found. Could not find a strain with that UCPC.",
   "status_code": 404
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="flowers" class="panel-title">Flowers</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="flower-object">Flower object</h3><smaller>Cannabis flowers in the Cannabis Reports system.</smaller><hr>Cannabis flowers are distinct products that can be found on retailer menus. The Cannabis Reports system allows for specific batches of cannabis flowers to be linked directly to the cultivator that grew the plant, while still maintaining a connection to the original genetics of the strain. Designating flowers as distinct items improves our ability to discuss the variety of flower quality that can be produced from the same strain grown at different farms. The main forms of flowers that Cannabis Reports recognizes are: - Flowers - Seeds - Clones - Shake Producers measure the cannabinoid content of their flowers in many ways. Currently, Cannabis Reports allows producers to display the percentage of weight for THC and CBD<table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the flower.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this flower.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the flower in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this flower.</p></div></td></tr><tr><td><div><p>barcode</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the barcode for this flower.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the flower listing on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this flower.</p></div></td></tr><tr><td><div><p>producer</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Information about the <a>producer</a> that created the flower.</p></div></td></tr><tr><td><div><p>producer.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>producer</a> of the flower.</p></div></td></tr><tr><td><div><p>producer.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> for the <a>producer</a>.</p></div></td></tr><tr><td><div><p>producer.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>producer</a> in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Type of cannabis flower.</p></div></td></tr><tr><td><div><p>strain</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p><a>Strain</a> that was used for this flower.</p></div></td></tr><tr><td><div><p>strain.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the <a>strain</a> used for this flower.</p></div></td></tr><tr><td><div><p>strain.ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> of the <a>strain</a> used for this flower.</p></div></td></tr><tr><td><div><p>strain.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strain</a> used in this flower in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>labTest</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the PDF containing lab test information for this flower.</p></div></td></tr><tr><td><div><p>thc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>THC</a> in this flower.</p></div></td></tr><tr><td><div><p>cbd</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Percentage of <a>CBD</a> in this flower.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for the flower.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of reviews for the flower.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the reviews for the flower.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the flower was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the flower was updated.</p></div></td></tr></tbody></table>### Explore Flowers Endpoints<hr><smaller>Here are some of the results available from the different flower endpoints:</smaller><table><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/flowers</a></p></div></td><td><div><p>Gets a paginated list of flowers with optional sorting.</p></div></td></tr><tr><td><div><p><a>/flowers/type/:flowerType</a></p></div></td><td><div><p>Gets a paginated list of products for a given type with optional sorting.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc</a></p></div></td><td><div><p>Gets an individual flower based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc/reviews</a></p></div></td><td><div><p>Gets the reviews for a cannabis flower.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc/effectsFlavors</a></p></div></td><td><div><p>Gets the average effects and flavors from reviews for this flower.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc/producer</a></p></div></td><td><div><p>Gets the producer for a given flower.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc/strain</a></p></div></td><td><div><p>Gets the information about a strain for a flower with the given UCPC.</p></div></td></tr><tr><td><div><p><a>/flowers/:ucpc/availability/geo/:lat/:lng/:radius</a></p></div></td><td><div><p>Get information about the availability of a flower using latitude and longitude.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers"><span class="parent"></span>/flowers</a> <span class="methods"><a href="#flowers_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of flowers with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/flowers</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of flowers with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="flowers_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Key Lime Pie - Flowers",
+      "ucpc": "9XVU7FNY7ZMW2KZQTVNR00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/flowers/9XVU7FNY7ZMW2KZQTVNR00000",
+      "qr": "https://www.cannabisreports.com/flower-reports/qr-code/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers.png",
+      "barcode": "https://www.cannabisreports.com/flower-reports/barcode/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers.png",
+      "url": "https://www.cannabisreports.com/flower-reports/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers",
+      "image": "https://www.cannabisreports.com/images/flowers/d/full_d16466f2cf111e3d1ca524abd85e3e3eeeb51f1c.jpg",
+      "producer": {
+        "name": "Elevate Cannabis Co.",
+        "ucpc": "0000000000MW2KZ0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000MW2KZ0000000000"
+      },
+      "type": "flowers",
+      "strain": {
+        "name": "Key Lime Pie",
+        "ucpc": "9XVU7FNY7Z000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU7FNY7Z000000000000000"
+      },
+      "labTest": false,
+      "thc": "22.23%",
+      "cbd": "0.22%",
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/flowers/9XVU7FNY7ZMW2KZQTVNR00000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2016-02-29 23:33:05",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2016-02-29 23:33:05",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 2288,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 229,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/flowers?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/flowers?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers_type__flowerType_"><span class="parent">/flowers</span>/type/{flowerType}</a> <span class="methods"><a href="#flowers_type__flowerType__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers_type__flowerType_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers_type__flowerType__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of products for a given type with optional sorting.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers_type__flowerType__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers</span>/type/{flowerType}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of products for a given type with optional sorting.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers_type__flowerType__get_request" data-toggle="tab">Request</a></li><li><a href="#flowers_type__flowerType__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers_type__flowerType__get_request"><h3>URI Parameters</h3><ul><li><strong>flowerType</strong>: <em>required (string)</em><p>The type of flowers you want to search through.</p><p><strong>Example</strong>:</p><pre>flowers</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p></li></ul></div><div class="tab-pane" id="flowers_type__flowerType__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Key Lime Pie - Flowers",
+      "ucpc": "9XVU7FNY7ZMW2KZQTVNR00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/flowers/9XVU7FNY7ZMW2KZQTVNR00000",
+      "qr": "https://www.cannabisreports.com/flower-reports/qr-code/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers.png",
+      "barcode": "https://www.cannabisreports.com/flower-reports/barcode/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers.png",
+      "url": "https://www.cannabisreports.com/flower-reports/elevate-cannabis-co/unknown-breeder/key-lime-pie/flowers",
+      "image": "https://www.cannabisreports.com/images/flowers/d/full_d16466f2cf111e3d1ca524abd85e3e3eeeb51f1c.jpg",
+      "producer": {
+        "name": "Elevate Cannabis Co.",
+        "ucpc": "0000000000MW2KZ0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000MW2KZ0000000000"
+      },
+      "type": "flowers",
+      "strain": {
+        "name": "Key Lime Pie",
+        "ucpc": "9XVU7FNY7Z000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU7FNY7Z000000000000000"
+      },
+      "labTest": false,
+      "thc": "22.23%",
+      "cbd": "0.22%",
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/flowers/9XVU7FNY7ZMW2KZQTVNR00000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2016-02-29 23:33:05",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2016-02-29 23:33:05",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 2288,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 229,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/flowers?sort=-updatedAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/flowers?sort=-updatedAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc_"><span class="parent">/flowers</span>/{ucpc}</a> <span class="methods"><a href="#flowers__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual flower based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers</span>/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual flower based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul></div><div class="tab-pane" id="flowers__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "name": "Ogre Berry - Flowers",
+  "ucpc": "AHZ7H4N6467FVUDY3DAY00000",
+  "link": "https://www.cannabisreports.com/api/v1.0/flowers/AHZ7H4N6467FVUDY3DAY00000",
+  "qr": "https://www.cannabisreports.com/flower-reports/qr-code/happyday-farms/happyday-farms/ogre-berry-4/flowers.png",
+  "barcode": "https://www.cannabisreports.com/flower-reports/barcode/happyday-farms/happyday-farms/ogre-berry-4/flowers.png",
+  "url": "https://www.cannabisreports.com/flower-reports/happyday-farms/happyday-farms/ogre-berry-4/flowers",
+  "image": "https://www.cannabisreports.com/images/flowers/3/full_31ba360ff85eaa8b74e953a172c6408f6647abe2.jpg",
+  "producer": {
+    "name": "HappyDay Farms",
+    "ucpc": "00000000007FVUD0000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000"
+  },
+  "type": "flowers",
+  "strain": {
+    "name": "Ogre Berry",
+    "ucpc": "9XVU74N646000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000"
+  },
+  "labTest": false,
+  "thc": false,
+  "cbd": false,
+  "reviews": {
+    "count": 1,
+    "link": "https://www.cannabisreports.com/api/v1.0/flowers/AHZ7H4N6467FVUDY3DAY00000/reviews"
+  },
+  "createdAt": {
+    "datetime": "2016-02-18 19:37:47",
+    "timezone": "UTC"
+  },
+  "updatedAt": {
+    "datetime": "2016-02-18 19:37:47",
+    "timezone": "UTC"
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__user"><span class="parent">/flowers/{ucpc}</span>/user</a> <span class="methods"><a href="#flowers__ucpc__user_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__user" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__user_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the user who added the product to the database.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__user_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/user</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the user who added the product to the database.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__user_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__user_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__user_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul></div><div class="tab-pane" id="flowers__ucpc__user_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "nickname": "jbcrockett",
+    "link": "https://www.cannabisreports.com/api/v1.0/users/jbcrockett",
+    "tagline": "Blazing the Alamo",
+    "url": "https://www.cannabisreports.com/profile/jbcrockett",
+    "slug": "jbcrockett",
+    "createdAt": {
+      "datetime": "2014-04-13 07:47:36",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2016-02-26 04:00:41",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a flower with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__reviews"><span class="parent">/flowers/{ucpc}</span>/reviews</a> <span class="methods"><a href="#flowers__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the reviews for a cannabis flower.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/reviews</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the reviews for a cannabis flower.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="flowers__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/cb17d26d7e877c5aa3060e285afbee22553a8119",
+      "url": "https://www.cannabisreports.com/smoke-reports/2016/03/01/cb17d26d7e877c5aa3060e285afbee22553a8119/jbcrockett",
+      "euphoria": "8",
+      "creativity": "10",
+      "pain_relief": null,
+      "appetite_gain": "6",
+      "calming": "4",
+      "anxiety": null,
+      "spicy": null,
+      "earthy": "2",
+      "fruity": "8",
+      "sour": "6",
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2016-03-01 23:36:32",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2016-03-01 23:36:32",
+        "timezone": "UTC"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 1,
+      "count": 1,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a flower with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__effectsFlavors"><span class="parent">/flowers/{ucpc}</span>/effectsFlavors</a> <span class="methods"><a href="#flowers__ucpc__effectsFlavors_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__effectsFlavors" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__effectsFlavors_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get the average effects and flavors from reviews for this flower.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__effectsFlavors_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/effectsFlavors</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get the average effects and flavors from reviews for this flower.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__effectsFlavors_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__effectsFlavors_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__effectsFlavors_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul></div><div class="tab-pane" id="flowers__ucpc__effectsFlavors_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "euphoria": "8.0000",
+    "creativity": "10.0000",
+    "calming": "4.0000",
+    "numbness": "4.0000",
+    "appetite_gain": "6.0000",
+    "dry_mouth": "6.0000",
+    "fruity": "8.0000",
+    "spicy": null,
+    "earthy": "2.0000",
+    "sour": "6.0000",
+    "sweet": "6.0000",
+    "pine": null,
+    "anxiety": null,
+    "reviews": 1
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a flower with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__producer"><span class="parent">/flowers/{ucpc}</span>/producer</a> <span class="methods"><a href="#flowers__ucpc__producer_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__producer" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__producer_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the producer for a given flower.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__producer_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/producer</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the producer for a given flower.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__producer_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__producer_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__producer_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul></div><div class="tab-pane" id="flowers__ucpc__producer_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "HappyDay Farms",
+    "ucpc": "00000000007FVUD0000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000",
+    "qr": "https://www.cannabisreports.com/producer-reports/happyday-farms/qr-code",
+    "url": "https://www.cannabisreports.com/producer-reports/happyday-farms",
+    "image": "https://www.cannabisreports.com/images/profile/4/full_4d36c17de8fbf6b27842e67ac36f6ff4ac60f6a0.jpg",
+    "reviews": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000/reviews"
+    },
+    "extracts": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000/extracts"
+    },
+    "edibles": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000/edibles"
+    },
+    "products": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/producers/00000000007FVUD0000000000/products"
+    },
+    "createdAt": {
+      "datetime": "2016-02-18 19:36:19",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2016-02-18 19:36:47",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a flower with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__strain"><span class="parent">/flowers/{ucpc}</span>/strain</a> <span class="methods"><a href="#flowers__ucpc__strain_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__strain" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__strain_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets the information about a strain for a flower with the given UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__strain_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/strain</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets the information about a strain for a flower with the given UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__strain_get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__strain_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__strain_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li></ul></div><div class="tab-pane" id="flowers__ucpc__strain_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Ogre Berry",
+    "ucpc": "9XVU74N646000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/happyday-farms/ogre-berry-4",
+    "image": "https://www.cannabisreports.com/images/strains/8/full_8dd6dbd49b15125172a96219086f81246e1ae15b.jpg",
+    "seedCompany": {
+      "name": "HappyDay Farms",
+      "ucpc": "AHZ7H00000000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/AHZ7H00000000000000000000"
+    },
+    "genetics": {
+      "names": "Ogre x Island Mountain Strawberry Afghani",
+      "ucpc": "9XVU7U9HUK000000000000000 x 9XVU7D492Z000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/genetics"
+    },
+    "lineage": [],
+    "children": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/children"
+    },
+    "reviews": {
+      "count": 0,
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU74N646000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2015-07-29 18:11:45",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-12-09 23:07:38",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a flower with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_flowers__ucpc__availability_geo__lat___lng___radius_"><span class="parent">/flowers/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</a> <span class="methods"><a href="#flowers__ucpc__availability_geo__lat___lng___radius__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_flowers__ucpc__availability_geo__lat___lng___radius_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Get information about the availability of a product using latitude and longitude.</p></div><div class="list-group"><div onclick="window.location.href = '#flowers__ucpc__availability_geo__lat___lng___radius__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get information about the availability of a strain using latitude and longitude.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="flowers__ucpc__availability_geo__lat___lng___radius__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/flowers/{ucpc}</span>/availability/geo/{lat}/{lng}/{radius}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get information about the availability of a strain using latitude and longitude.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#flowers__ucpc__availability_geo__lat___lng___radius__get_request" data-toggle="tab">Request</a></li><li><a href="#flowers__ucpc__availability_geo__lat___lng___radius__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="flowers__ucpc__availability_geo__lat___lng___radius__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis flower you want information about.</p><p><strong>Example</strong>:</p><pre>AHZ7H4N6467FVUDY3DAY00000</pre></li><li><strong>lat</strong>: <em>required (string)</em><p>Latitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>37.7749295</pre></li><li><strong>lng</strong>: <em>required (string)</em><p>Longitude for the center of your availability search.</p><p><strong>Example</strong>:</p><pre>-122.4194155</pre></li><li><strong>radius</strong>: <em>required (integer)</em><p>Radius to search for in miles, max 25.</p><p><strong>Example</strong>:</p><pre><code>10</code></pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li></ul></div><div class="tab-pane" id="flowers__ucpc__availability_geo__lat___lng___radius__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Jack Herer",
+      "ucpc": "VUJCJ4TYMG000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJ4TYMG000000000000000",
+      "type": "strain",
+      "location": {
+        "name": "Love Shack Cooperative",
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/love-shack-cooperative",
+        "lat": "37.7681384",
+        "lng": "-122.4246791"
+      },
+      "price": null,
+      "price_half_gram": null,
+      "price_gram": "10.00",
+      "price_eighth": "35.00",
+      "price_quarter": "70.00",
+      "price_half_ounce": "135.00",
+      "price_ounce": "265.00",
+      "createdAt": {
+        "datetime": "2014-05-20 18:31:40",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-21 04:56:23",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 10,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": []
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a strain with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li></ul></div></div></div></div></body></html>
