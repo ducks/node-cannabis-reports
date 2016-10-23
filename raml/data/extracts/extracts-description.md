@@ -529,7 +529,7 @@ https://www.cannabisreports.com/faq/typesconsumption/what-is-a-cannabis-extract
 <small>Here are some of the results available from the different extract
   endpoints</small>
 
-<table>
+<table class="table table-bordered table-hover">
   <tbody>
     <tr>
       <th>
