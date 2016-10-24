@@ -4,10 +4,6 @@ const config = require('config');
 const https = require('https');
 
 class CannabisHelper {
-  /**
-   * Creates a CannabisHelper instance
-   * @param {string} key - API key
-   */
   constructor(key) {
     if (!key) {
       throw new Error("No API key found"); 
@@ -16,11 +12,6 @@ class CannabisHelper {
     this._key = key;
   }
 
-  /**
-   * Parses a request response
-   * @method _parseReponse
-   * @returns {JSON} body - data parsed from response
-   */
   _parseResponse(res) {
     return new Promise((resolve, reject) => {
       var body = '';
@@ -35,12 +26,6 @@ class CannabisHelper {
     });
   }
 
-  /**
-   * Performs a GET request
-   * @method get
-   * @param {string} path
-   * @returns {JSON} res - JSON representing returned data
-   */
   get(path) {
     return new Promise((resolve, reject) => {
       const opts = {
@@ -52,7 +37,6 @@ class CannabisHelper {
         path: config.api.path + path,
       }
 
-      console.log(opts);
       const request = https.get(opts, res => {
         resolve(this._parseResponse(res));
       });
