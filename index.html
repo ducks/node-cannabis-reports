@@ -2334,4 +2334,565 @@
   "message": "Not found. Could not find a producer with that UCPC.",
   "status_code": 404
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li><li><a href="#edibles">Edibles</a></li><li><a href="#products">Products</a></li><li><a href="#producers">Producers</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="dispensaries" class="panel-title">Dispensaries</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="dispensary-object">Dispensary Object</h3><p><small>Cannabis dispensaries, deliveries, and retailers in the Cannabis Reports system.</small></p><hr><p>Cannabis Reports currently refers to all types of retailers in the API as a dispensary. Delivery services will not have an address associated with them, only a location. The dispensary menus are split into strains, extracts, edibles, and products.</p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the dispensary.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the dispensary in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this dispensary.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the dispensary listing on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size logo image for this dispensary.</p></div></td></tr><tr><td><div><p>state</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Two character representation of the state this dispensary is in.</p></div></td></tr><tr><td><div><p>city</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>City this dispensary is in.</p></div></td></tr><tr><td><div><p>lat</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Latitude of this dispensary.</p></div></td></tr><tr><td><div><p>lng</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Longitude of this dispensary.</p></div></td></tr><tr><td><div><p>address</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing additional location information for this dispensary.</p></div></td></tr><tr><td><div><p>address.address1</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Street address for this dispensary.</p></div></td></tr><tr><td><div><p>address.address2</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Additional street address line for this dispensary.</p></div></td></tr><tr><td><div><p>address.zip</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Zip Code for this dispensary.</p></div></td></tr><tr><td><div><p>slug</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Identifier for this dispensary; a combination of city and state.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about reviews for this dispensary.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of reviews for items from this dispensary.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the reviews for this dispensary in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>strains</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about <a>strains</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>strains.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of <a>flowers</a> available from the dispensary.</p></div></td></tr><tr><td><div><p>strains.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to <a>flower</a> menu items available from this dispensary.</p></div></td></tr><tr><td><div><p>extracts</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about <a>extracts</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>extracts.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of <a>extracts</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>extracts.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to <a>extracts</a> menu items available from this dispensary.</p></div></td></tr><tr><td><div><p>edibles</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about <a>edibles</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>edibles.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of <a>edibles</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>edibles.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to <a>edible</a> menu items available from this dispensary.</p></div></td></tr><tr><td><div><p>products</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about <a>products</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>products.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of <a>products</a> available at this dispensary.</p></div></td></tr><tr><td><div><p>products.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to <a>product</a> menu items available from this dispensary.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was updated.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was added.</p></div></td></tr></tbody></table><h3 id="explore-dispensary-endpoints">Explore Dispensary Endpoints</h3><hr><p>Here are some of the results available from the different dispensary endpoints:</p><table class="table table-bordered table-hover"><tbody><tr><td><div><p><a>/dispensaries</a></p></div></td><td><div><p>Gets a paginated list of dispensaries from the system.</p></div></td></tr><tr><td><div><p><a>/dispensaries/:state/:city/:slug</a></p></div></td><td><div><p>Gets information about an individual dispensary based on the state, city, and slug.</p></div></td></tr><tr><td><div><p><a>/dispensaries/:state/:city/:slug/strains</a></p></div></td><td><div><p>Gets a paginated list of strains for a dispensary from the given information.</p></div></td></tr><tr><td><div><p><a>/dispensaries/:state/:city/:slug/extracts</a></p></div></td><td><div><p>Gets a paginated list of extracts for a dispensary from the given information.</p></div></td></tr><tr><td><div><p><a>/dispensaries/:state/:city/:slug/edibles</a></p></div></td><td><div><p>Gets a paginated list of edibles for a dispensary from the given information.</p></div></td></tr><tr><td><div><p><a>/dispensaries/:state/:city/:slug/products</a></p></div></td><td><div><p>Gets a paginated list of products for a dispensary from the given information.</p></div></td></tr></tbody></table><hr><h3 id="menu-item-object">Menu Item Object</h3><p><small>Menu items for dispensaries.</small></p><hr><p>When getting menu items from dispensaries, the API will return an object containing strain, extract, edible, or product, as well as the pricing information for the item.</p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the item.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Type of item: <a>strain</a>, <a>extract</a>, <a>edible</a>, or <a>product</a>.</p></div></td></tr><tr><td><div><p>item</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>The <a>strain</a>, <a>extract</a>, <a>edible</a>, or <a>product</a>.</p></div></td></tr><tr><td><div><p>price</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>The price for the item. This is <code>null</code> for <a>strains</a> and <a>extracts</a>.</p></div></td></tr><tr><td><div><p>price_half_gram</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one half gram of the item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_gram</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one gram of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_eighth</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one eighth ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_quarter</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one quarter ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_half_ounce</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one half ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_ounce</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was updated.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was added.</p></div></td></tr></tbody></table><hr><h3 id="menu-item-summary-object">Menu Item Summary Object</h3><p><small>Menu item summary for when it is known what the menu item is.</small></p><hr><p>When getting menu item information about an already known item, like in many of our availability endpoints, the API will return pricing and location information.</p><table class="table table-bordered table-hover"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the item.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> of the item.</p></div></td></tr><tr><td><div><p>type</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>The type of item this is: <a>strain</a>, <a>extract</a>, or <a>product</a>.</p></div></td></tr><tr><td><div><p>location</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information about the location this item is at.</p></div></td></tr><tr><td><div><p>location.name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the location this item is at.</p></div></td></tr><tr><td><div><p>location.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to this dispensary in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>location.lat</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Latitude of the dispensary this item is at.</p></div></td></tr><tr><td><div><p>location.lng</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Longitude of the dispensary this item is at.</p></div></td></tr><tr><td><div><p>price</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>The price for the item. This is <code>null</code> for <a>strains</a> and <a>extracts</a>.</p></div></td></tr><tr><td><div><p>price_half_gram</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one half gram of the item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_gram</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one gram of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_eighth</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one eighth ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_quarter</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one quarter ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_half_ounce</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one half ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>price_ounce</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Price for one ounce of this item. This is <code>null</code> for <a>edibles</a> and <a>products</a>.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was updated.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the dispensary was added.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries"><span class="parent"></span>/dispensaries</a> <span class="methods"><a href="#dispensaries_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#dispensaries_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets a paginated list of dispensaries from the system.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/dispensaries</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets a paginated list of dispensaries from the system.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries_get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries_get_request"><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="dispensaries_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "The Cookie Co. 415",
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415",
+      "qr": "https://www.cannabisreports.com/dispensary-reports/ca/san-francisco/the-cookie-co-415/qr-code",
+      "url": "https://www.cannabisreports.com/dispensary-reports/ca/san-francisco/the-cookie-co-415",
+      "image": "https://www.cannabisreports.com/images/profile/0/full_0bc8bae594a0aba345cad6b559907aa7e4c2a289.jpg",
+      "state": "CA",
+      "city": "San Francisco",
+      "slug": "ca/san-francisco/the-cookie-co-415",
+      "lat": "37.7470182",
+      "lng": "-122.418719",
+      "address": {
+        "address1": "3139 Mission Street",
+        "address2": "",
+        "zip": "94114"
+      },
+      "reviews": {
+        "count": 0,
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415/reviews"
+      },
+      "strains": {
+        "count": 20,
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415/strains"
+      },
+      "extracts": {
+        "count": 35,
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415/extracts"
+      },
+      "edibles": {
+        "count": 42,
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415/edibles"
+      },
+      "products": {
+        "count": 4,
+        "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/the-cookie-co-415/products"
+      },
+      "createdAt": {
+        "datetime": "2015-04-19 14:22:20",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-19 14:22:20",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 70,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 3,
+      "total_pages": 7,
+      "links": {
+        "previous": "https://www.cannabisreports.com/api/v1.0/dispensaries?sort=-createdAt&amp;page=2",
+        "next": "https://www.cannabisreports.com/api/v1.0/dispensaries?sort=-createdAt&amp;page=4"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries__state___city___slug_"><span class="parent">/dispensaries</span>/{state}/{city}/{slug}</a> <span class="methods"><a href="#dispensaries__state___city___slug__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries__state___city___slug_" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>More information about the various fields can be found in the dispensary object section of the documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#dispensaries__state___city___slug__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets information about an individual dispensary based on the state, city, and slug.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries__state___city___slug__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/dispensaries</span>/{state}/{city}/{slug}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets information about an individual dispensary based on the state, city, and slug.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries__state___city___slug__get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries__state___city___slug__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries__state___city___slug__get_request"><h3>URI Parameters</h3><ul><li><strong>state</strong>: <em>required (string)</em><p>Two character state for the dispensary.</p><p><strong>Example</strong>:</p><pre>ca</pre></li><li><strong>city</strong>: <em>required (string)</em><p>City the dispensary is in.</p><p><strong>Example</strong>:</p><pre>san-francisco</pre></li><li><strong>slug</strong>: <em>required (string)</em><p>Slug for the name of the dispensary.</p><p><strong>Example</strong>:</p><pre>grass-roots</pre></li></ul></div><div class="tab-pane" id="dispensaries__state___city___slug__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Grass Roots",
+    "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots",
+    "qr": "https://www.cannabisreports.com/dispensary-reports/ca/san-francisco/grass-roots/qr-code",
+    "url": "https://www.cannabisreports.com/dispensary-reports/ca/san-francisco/grass-roots",
+    "image": "https://www.cannabisreports.com/images/profile/5/full_5720f041410b18488b6e4b92c0a3ce598bec3ea8.jpg",
+    "state": "CA",
+    "city": "San Francisco",
+    "slug": "ca/san-francisco/grass-roots",
+    "lat": "37.7866941",
+    "lng": "-122.4194293",
+    "address": {
+      "address1": "1077 Post Street",
+      "address2": "",
+      "zip": "94109"
+    },
+    "reviews": {
+      "count": 55,
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/reviews"
+    },
+    "strains": {
+      "count": 39,
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/strains"
+    },
+    "extracts": {
+      "count": 58,
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/extracts"
+    },
+    "edibles": {
+      "count": 167,
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/edibles"
+    },
+    "products": {
+      "count": 54,
+      "link": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/products"
+    },
+    "createdAt": {
+      "datetime": "2015-04-24 20:13:46",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-04-24 20:13:46",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a dispensary with that information.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries__state___city___slug__strains"><span class="parent">/dispensaries/{state}/{city}/{slug}</span>/strains</a> <span class="methods"><a href="#dispensaries__state___city___slug__strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries__state___city___slug__strains" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will return an array of dispensary menu items with strains for the items. More information about dispensary menu items can be found in the menu item object section of the documentation.</p><p>More information about the strain fields can be found in the strain object section of the documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#dispensaries__state___city___slug__strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get a paginated list of strains for a dispensary from the given information.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries__state___city___slug__strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/dispensaries/{state}/{city}/{slug}</span>/strains</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a paginated list of strains for a dispensary from the given information.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries__state___city___slug__strains_get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries__state___city___slug__strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries__state___city___slug__strains_get_request"><h3>URI Parameters</h3><ul><li><strong>state</strong>: <em>required (string)</em><p>Two character state for the dispensary.</p><p><strong>Example</strong>:</p><pre>ca</pre></li><li><strong>city</strong>: <em>required (string)</em><p>City the dispensary is in.</p><p><strong>Example</strong>:</p><pre>san-francisco</pre></li><li><strong>slug</strong>: <em>required (string)</em><p>Slug for the name of the dispensary.</p><p><strong>Example</strong>:</p><pre>grass-roots</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="dispensaries__state___city___slug__strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Blackberry Kush - Oil",
+      "ucpc": "9XVU79H97ZVU7TGC4LET00000",
+      "link": "https://www.cannabisreports.com/api/v1.0/extracts/9XVU79H97ZVU7TGC4LET00000",
+      "qr": "https://www.cannabisreports.com/extract-reports/qr-code/absolute-xtracts/unknown-breeder/blackberry-kush/oil.png",
+      "barcode": "https://www.cannabisreports.com/extract-reports/barcode/absolute-xtracts/unknown-breeder/blackberry-kush/oil.png",
+      "url": "https://www.cannabisreports.com/extract-reports/absolute-xtracts/unknown-breeder/blackberry-kush/oil",
+      "image": "https://www.cannabisreports.com/images/extracts/oil.jpg",
+      "producer": {
+        "name": "Absolute Xtracts",
+        "ucpc": "0000000000VU7TG0000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000VU7TG0000000000"
+      },
+      "type": "oil",
+      "strain": {
+        "name": "Blackberry Kush",
+        "ucpc": "9XVU79H97Z000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU79H97Z000000000000000"
+      },
+      "labTest": false,
+      "thc": false,
+      "cbd": false,
+      "reviews": 0,
+      "createdAt": {
+        "datetime": "2015-04-10 18:37:16",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-10 18:37:16",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 18,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 2,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/producers/0000000000VU7TG0000000000/extracts?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a producer with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries__state___city___slug__extracts"><span class="parent">/dispensaries/{state}/{city}/{slug}</span>/extracts</a> <span class="methods"><a href="#dispensaries__state___city___slug__extracts_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries__state___city___slug__extracts" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will return an array of dispensary menu items with extracts for the items. More information about dispensary menu items can be found in the menu item object section of the documentation.</p><p>More information about the strain fields can be found in the strain object section of the documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#dispensaries__state___city___slug__extracts_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get a paginated list of extracts for a dispensary from the given information.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries__state___city___slug__extracts_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/dispensaries/{state}/{city}/{slug}</span>/extracts</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a paginated list of extracts for a dispensary from the given information.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries__state___city___slug__extracts_get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries__state___city___slug__extracts_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries__state___city___slug__extracts_get_request"><h3>URI Parameters</h3><ul><li><strong>state</strong>: <em>required (string)</em><p>Two character state for the dispensary.</p><p><strong>Example</strong>:</p><pre>ca</pre></li><li><strong>city</strong>: <em>required (string)</em><p>City the dispensary is in.</p><p><strong>Example</strong>:</p><pre>san-francisco</pre></li><li><strong>slug</strong>: <em>required (string)</em><p>Slug for the name of the dispensary.</p><p><strong>Example</strong>:</p><pre>grass-roots</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="dispensaries__state___city___slug__extracts_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Bubblegum - Vaporizer Cartridge",
+      "type": "extract",
+      "item": {
+        "name": "Bubblegum - Vaporizer Cartridge",
+        "ucpc": "VRTEW9D296P93C7HHCVM00000",
+        "link": "https://www.cannabisreports.com/api/v1.0/extracts/VRTEW9D296P93C7HHCVM00000",
+        "qr": "https://www.cannabisreports.com/extract-reports/qr-code/gold-drop/thseeds/bubblegum/vaporizer-cartridge.png",
+        "barcode": "https://www.cannabisreports.com/extract-reports/barcode/gold-drop/thseeds/bubblegum/vaporizer-cartridge.png",
+        "url": "https://www.cannabisreports.com/extract-reports/gold-drop/thseeds/bubblegum/vaporizer-cartridge",
+        "image": "https://www.cannabisreports.com/images/extracts/5/full_5dc14aff95a88e78e77fb4e9e28ff06584b8e174.jpg",
+        "producer": {
+          "name": "Gold Drop",
+          "ucpc": "0000000000P93C70000000000",
+          "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000P93C70000000000"
+        },
+        "type": "vaporizer cartridge",
+        "strain": {
+          "name": "Bubblegum",
+          "ucpc": "VRTEW9D296000000000000000",
+          "link": "https://www.cannabisreports.com/api/v1.0/strains/VRTEW9D296000000000000000"
+        },
+        "labTest": false,
+        "thc": false,
+        "cbd": false,
+        "reviews": 0,
+        "createdAt": {
+          "datetime": "2015-03-10 04:57:00",
+          "timezone": "UTC"
+        },
+        "updatedAt": {
+          "datetime": "2015-03-16 22:52:20",
+          "timezone": "UTC"
+        }
+      },
+      "price": null,
+      "price_half_gram": "30.00",
+      "price_gram": "66.50",
+      "price_eighth": null,
+      "price_quarter": null,
+      "price_half_ounce": null,
+      "price_ounce": null,
+      "createdAt": {
+        "datetime": "2015-04-29 21:39:52",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-29 21:40:34",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 58,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 6,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/extracts?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a producer with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries__state___city___slug__edibles"><span class="parent">/dispensaries/{state}/{city}/{slug}</span>/edibles</a> <span class="methods"><a href="#dispensaries__state___city___slug__edibles_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries__state___city___slug__edibles" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will return an array of dispensary menu items with edibles for the items. More information about dispensary menu items can be found in the menu item object section of the documentation.</p><p>More information about the strain fields can be found in the strain object section of the documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#dispensaries__state___city___slug__edibles_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get a paginated list of edibles for a dispensary from the given information.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries__state___city___slug__edibles_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/dispensaries/{state}/{city}/{slug}</span>/edibles</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a paginated list of edibles for a dispensary from the given information.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries__state___city___slug__edibles_get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries__state___city___slug__edibles_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries__state___city___slug__edibles_get_request"><h3>URI Parameters</h3><ul><li><strong>state</strong>: <em>required (string)</em><p>Two character state for the dispensary.</p><p><strong>Example</strong>:</p><pre>ca</pre></li><li><strong>city</strong>: <em>required (string)</em><p>City the dispensary is in.</p><p><strong>Example</strong>:</p><pre>san-francisco</pre></li><li><strong>slug</strong>: <em>required (string)</em><p>Slug for the name of the dispensary.</p><p><strong>Example</strong>:</p><pre>grass-roots</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="dispensaries__state___city___slug__edibles_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Ultra Potent Gingerbread",
+      "type": "edible",
+      "item": {
+        "name": "Ultra Potent Gingerbread",
+        "ucpc": "0000000000XUQ2T6XXYA00000",
+        "link": "https://www.cannabisreports.com/api/v1.0/edibles/0000000000XUQ2T6XXYA00000",
+        "qr": "https://www.cannabisreports.com/edible-reports/qr-code/on-the-rise/ultra-potent-gingerbread",
+        "barcode": "https://www.cannabisreports.com/edible-reports/barcode/on-the-rise/ultra-potent-gingerbread",
+        "url": "https://www.cannabisreports.com/edible-reports/on-the-rise/ultra-potent-gingerbread",
+        "image": "https://www.cannabisreports.com/images/strains/no_image.png",
+        "producer": {
+          "name": "On The Rise",
+          "ucpc": "0000000000XUQ2T0000000000",
+          "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000XUQ2T0000000000"
+        },
+        "type": "baked good",
+        "strain": [],
+        "labTest": false,
+        "thc": false,
+        "cbd": false,
+        "cannabis": "10,000mg",
+        "hashOil": false,
+        "reviews": 0,
+        "createdAt": {
+          "datetime": "2015-04-29 22:30:41",
+          "timezone": "UTC"
+        },
+        "updatedAt": {
+          "datetime": "2015-04-29 22:31:08",
+          "timezone": "UTC"
+        }
+      },
+      "price": "40.00",
+      "price_half_gram": null,
+      "price_gram": null,
+      "price_eighth": null,
+      "price_quarter": null,
+      "price_half_ounce": null,
+      "price_ounce": null,
+      "createdAt": {
+        "datetime": "2015-04-29 22:30:58",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2015-04-29 22:30:58",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 167,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 17,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/edibles?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a producer with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_dispensaries__state___city___slug__products"><span class="parent">/dispensaries/{state}/{city}/{slug}</span>/products</a> <span class="methods"><a href="#dispensaries__state___city___slug__products_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_dispensaries__state___city___slug__products" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>This will return an array of dispensary menu items with products for the items. More information about dispensary menu items can be found in the menu item object section of the documentation.</p><p>More information about the strain fields can be found in the strain object section of the documentation.</p></div><div class="list-group"><div onclick="window.location.href = '#dispensaries__state___city___slug__products_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Get a paginated list of products for a dispensary from the given information.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="dispensaries__state___city___slug__products_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/dispensaries/{state}/{city}/{slug}</span>/products</h4></div><div class="modal-body"><div class="alert alert-info"><p>Get a paginated list of products for a dispensary from the given information.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#dispensaries__state___city___slug__products_get_request" data-toggle="tab">Request</a></li><li><a href="#dispensaries__state___city___slug__products_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="dispensaries__state___city___slug__products_get_request"><h3>URI Parameters</h3><ul><li><strong>state</strong>: <em>required (string)</em><p>Two character state for the dispensary.</p><p><strong>Example</strong>:</p><pre>ca</pre></li><li><strong>city</strong>: <em>required (string)</em><p>City the dispensary is in.</p><p><strong>Example</strong>:</p><pre>san-francisco</pre></li><li><strong>slug</strong>: <em>required (string)</em><p>Slug for the name of the dispensary.</p><p><strong>Example</strong>:</p><pre>grass-roots</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="dispensaries__state___city___slug__products_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Purple Church - Pre-roll",
+      {
+        "data": [
+          {
+            "name": "Purple Church - Pre-roll",
+            "type": "product",
+            "item": {
+              "name": "Purple Church - Pre-roll",
+              "ucpc": "9XVU7AHUZ3C3T4JH3V2N00000",
+              "link": "https://www.cannabisreports.com/api/v1.0/products/9XVU7AHUZ3C3T4JH3V2N00000",
+              "qr": "https://www.cannabisreports.com/product-reports/qr-code/medi-cone/purple-church.png",
+              "barcode": "https://www.cannabisreports.com/product-reports/barcode/medi-cone/purple-church.png",
+              "url": "https://www.cannabisreports.com/product-reports/medi-cone/purple-church",
+              "image": "https://www.cannabisreports.com/images/strains/no_image.png",
+              "producer": {
+                "name": "Medi Cone",
+                "ucpc": "0000000000C3T4J0000000000",
+                "link": "https://www.cannabisreports.com/api/v1.0/producers/0000000000C3T4J0000000000"
+              },
+              "type": "pre-roll",
+              "strain": {
+                "name": "Purple Church",
+                "ucpc": "9XVU7AHUZ3000000000000000",
+                "link": "https://www.cannabisreports.com/api/v1.0/strains/9XVU7AHUZ3000000000000000"
+              },
+              "labTest": false,
+              "thc": false,
+              "cbd": false,
+              "cannabis": false,
+              "hashOil": false,
+              "reviews": 0,
+              "createdAt": {
+                "datetime": "2015-02-11 04:47:39",
+                "timezone": "UTC"
+              },
+              "updatedAt": {
+                "datetime": "2015-02-11 04:47:39",
+                "timezone": "UTC"
+              }
+            },
+            "price": "12.00",
+            "price_half_gram": null,
+            "price_gram": null,
+            "price_eighth": null,
+            "price_quarter": null,
+            "price_half_ounce": null,
+            "price_ounce": null,
+            "createdAt": {
+              "datetime": "2015-04-29 21:11:48",
+              "timezone": "UTC"
+            },
+            "updatedAt": {
+              "datetime": "2015-04-29 21:11:48",
+              "timezone": "UTC"
+            }
+          },
+          {...}
+        ],
+        "meta": {
+          "pagination": {
+            "total": 54,
+            "count": 10,
+            "per_page": 10,
+            "current_page": 1,
+            "total_pages": 6,
+            "links": {
+              "next": "https://www.cannabisreports.com/api/v1.0/dispensaries/ca/san-francisco/grass-roots/products?page=2"
+            }
+          }
+        }
+      }
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Invalid sort. Please refer to the documentation for appropriate sorts.",
+  "status_code": 400
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a producer with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="seed_companies__ucpc_" class="panel-title">Seed Companies</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="seed-company-object">Seed Company Object</h3><p><small>Seed Companies in the Cannabis Reports system.</small></p><hr><p>Cannabis seed companies create the variety of strains available for growing and breeding.</p><h3 id="seed-company-attributes">Seed Company Attributes</h3><hr><table class="table table-bordered table-hover"><tbody><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the cannabis seed company.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this seed company.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the seed company in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this seed company.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p>&#39;url&#39;</p></div></td><td><div><p>Link to the seed company on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this seed company on Cannabis Reports.</p></div></td></tr><tr><td><div><p>lineage</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Countries of origin for the genetics of the <a>strains</a> available from this seed company. Object keys are the country name and the values are two character country codes.</p></div></td></tr><tr><td><div><p>strains</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>strains.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>strains.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Links to the reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the seed company was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the seed company was updated.</p></div></td></tr></tbody></table><h3 id="explore-seed-company-endpoints">Explore Seed Company Endpoints</h3><hr><p>Here are some of the results available from the different seed company endpoints:</p><table class="table table-bordered table-hover"><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/seed-companies/:ucpc</a></p></div></td><td><div><p>Gets an individual seed company based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/seed-companies/:ucpc/strains</a></p></div></td><td><div><p>Gets the information about the strains offered by the seed company.</p></div></td></tr><tr><td><div><p><a>/seed-companies/:ucpc/reviews</a></p></div></td><td><div><p>Gets the reviews for the strains available from the seed company.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc_"><span class="parent"></span>/seed-companies/{ucpc}</a> <span class="methods"><a href="#seed_companies__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual seed company based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/seed-companies/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual seed company based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Sensi Seeds",
+    "ucpc": "VUJCJ00000000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds",
+    "image": "https://www.cannabisreports.com/images/profile/1/full_15fda07a135540c1de6afbb38dafe2113a11a7a4.jpg",
+    "lineage": {
+      "Afghanistan": "AF",
+      "Canada": "CA",
+      "Colombia": "CO",
+      "Hungary": "HU",
+      "India": "IN",
+      "Indonesia": "ID",
+      "Jamaica": "JM",
+      "Malawi": "MW",
+      "Mexico": "MX",
+      "Nepal": "NP",
+      "Nigeria": "NG",
+      "Pakistan": "PK",
+      "Panama": "PA",
+      "South Africa": "ZA",
+      "Thailand": "TH",
+      "United States": "US"
+    },
+    "strains": {
+      "count": 63,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/strains"
+    },
+    "reviews": {
+      "count": 25,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2014-04-09 09:29:57",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-01-08 20:05:52",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc__strains"><span class="parent">/seed-companies/{ucpc}</span>/strains</a> <span class="methods"><a href="#seed_companies__ucpc__strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc__strains" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Gets the information about the strains offered by the seed company.</p></div><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/seed-companies/{ucpc}</span>/strains</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__strains_get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__strains_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Black Domina",
+      "ucpc": "VUJCJVRU4N000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/black-domina/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds/black-domina",
+      "image": "https://www.cannabisreports.com/images/strains/2/full_28da06cc8436f90fa2a70839331ed9debf417081.jpg",
+      "seedCompany": {
+        "name": "Sensi Seeds",
+        "ucpc": "VUJCJ00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000"
+      },
+      "genetics": {
+        "names": "Northern Lights / Ortega C99 / Hash Plant (Sensi) / Afghani Landrace",
+        "ucpc": "2NGAWWTJNV000000000000000 / 3CV7EKUTCE000000000000000 / VUJCJZ9MNQ000000000000000 / 9XVU7HGAVW000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/genetics"
+      },
+      "lineage": {
+        "Afghanistan": "AF",
+        "Colombia": "CO",
+        "India": "IN",
+        "Mexico": "MX",
+        "Thailand": "TH"
+      },
+      "children": {
+        "count": 22,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/children"
+      },
+      "reviews": {
+        "count": 3,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2008-08-15 19:20:00",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-06-25 23:05:43",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 63,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 7,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/strains?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc__reviews"><span class="parent">/seed-companies/{ucpc}</span>/reviews</a> <span class="methods"><a href="#seed_companies__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Gets the reviews for the strains available from the seed company.</p></div><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/seed-companies/{ucpc}</span>/reviews</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/8816186ce68961c874f0b92a487a2f38fc4acee0",
+      "url": "https://www.cannabisreports.com/smoke-reports/2009/11/11/8816186ce68961c874f0b92a487a2f38fc4acee0/anonymous",
+      "euphoria": "8",
+      "creativity": null,
+      "pain_relief": null,
+      "appetite_gain": "6",
+      "calming": null,
+      "anxiety": "3",
+      "spicy": "0",
+      "earthy": "0",
+      "fruity": "6",
+      "sour": "2",
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2009-11-11 02:40:05",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-16 03:20:38",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 25,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 3,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/reviews?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li><li><a href="#edibles">Edibles</a></li><li><a href="#products">Products</a></li><li><a href="#producers">Producers</a></li><li><a href="#dispensaries">Dispensaries</a></li><li><a href="#seed_companies__ucpc_">Seed Companies</a></li></ul></div></div></div></div></body></html>
