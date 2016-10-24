@@ -2741,4 +2741,158 @@
   "message": "Not found. Could not find a producer with that UCPC.",
   "status_code": 404
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li><li><a href="#edibles">Edibles</a></li><li><a href="#products">Products</a></li><li><a href="#producers">Producers</a></li><li><a href="#dispensaries">Dispensaries</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="seed_companies__ucpc_" class="panel-title">Seed Companies</h3></div><div class="panel-body"><div class="top-resource-description"><h3 id="seed-company-object">Seed Company Object</h3><p><small>Seed Companies in the Cannabis Reports system.</small></p><hr><p>Cannabis seed companies create the variety of strains available for growing and breeding.</p><h3 id="seed-company-attributes">Seed Company Attributes</h3><hr><table class="table table-bordered table-hover"><tbody><tr><td><div><p>name</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p>Name of the cannabis seed company.</p></div></td></tr><tr><td><div><p>ucpc</p></div></td><td><div><p><code>string</code></p></div></td><td><div><p><a>UCPC</a> code for this seed company.</p></div></td></tr><tr><td><div><p>link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the seed company in the Cannabis Reports API.</p></div></td></tr><tr><td><div><p>qr</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the QR code for this seed company.</p></div></td></tr><tr><td><div><p>url</p></div></td><td><div><p>&#39;url&#39;</p></div></td><td><div><p>Link to the seed company on the Cannabis Reports website.</p></div></td></tr><tr><td><div><p>image</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the full size image for this seed company on Cannabis Reports.</p></div></td></tr><tr><td><div><p>lineage</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Countries of origin for the genetics of the <a>strains</a> available from this seed company. Object keys are the country name and the values are two character country codes.</p></div></td></tr><tr><td><div><p>strains</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>strains.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>Number of <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>strains.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Link to the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing information on the reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews.count</p></div></td><td><div><p><code>integer</code></p></div></td><td><div><p>The number of reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>reviews.link</p></div></td><td><div><p><code>url</code></p></div></td><td><div><p>Links to the reviews for all of the <a>strains</a> available from this seed company.</p></div></td></tr><tr><td><div><p>createdAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the seed company was added.</p></div></td></tr><tr><td><div><p>updatedAt</p></div></td><td><div><p><code>object</code></p></div></td><td><div><p>Object containing two strings, "dateTime" and the "timezone" when the seed company was updated.</p></div></td></tr></tbody></table><h3 id="explore-seed-company-endpoints">Explore Seed Company Endpoints</h3><hr><p>Here are some of the results available from the different seed company endpoints:</p><table class="table table-bordered table-hover"><tbody><tr><th>Endpoint</th><th>Result</th></tr><tr><td><div><p><a>/seed-companies/:ucpc</a></p></div></td><td><div><p>Gets an individual seed company based on the UCPC.</p></div></td></tr><tr><td><div><p><a>/seed-companies/:ucpc/strains</a></p></div></td><td><div><p>Gets the information about the strains offered by the seed company.</p></div></td></tr><tr><td><div><p><a>/seed-companies/:ucpc/reviews</a></p></div></td><td><div><p>Gets the reviews for the strains available from the seed company.</p></div></td></tr></tbody></table></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc_"><span class="parent"></span>/seed-companies/{ucpc}</a> <span class="methods"><a href="#seed_companies__ucpc__get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Gets an individual seed company based on the UCPC.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/seed-companies/{ucpc}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Gets an individual seed company based on the UCPC.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": {
+    "name": "Sensi Seeds",
+    "ucpc": "VUJCJ00000000000000000000",
+    "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000",
+    "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/qr-code.svg",
+    "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds",
+    "image": "https://www.cannabisreports.com/images/profile/1/full_15fda07a135540c1de6afbb38dafe2113a11a7a4.jpg",
+    "lineage": {
+      "Afghanistan": "AF",
+      "Canada": "CA",
+      "Colombia": "CO",
+      "Hungary": "HU",
+      "India": "IN",
+      "Indonesia": "ID",
+      "Jamaica": "JM",
+      "Malawi": "MW",
+      "Mexico": "MX",
+      "Nepal": "NP",
+      "Nigeria": "NG",
+      "Pakistan": "PK",
+      "Panama": "PA",
+      "South Africa": "ZA",
+      "Thailand": "TH",
+      "United States": "US"
+    },
+    "strains": {
+      "count": 63,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/strains"
+    },
+    "reviews": {
+      "count": 25,
+      "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/reviews"
+    },
+    "createdAt": {
+      "datetime": "2014-04-09 09:29:57",
+      "timezone": "UTC"
+    },
+    "updatedAt": {
+      "datetime": "2015-01-08 20:05:52",
+      "timezone": "UTC"
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc__strains"><span class="parent">/seed-companies/{ucpc}</span>/strains</a> <span class="methods"><a href="#seed_companies__ucpc__strains_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc__strains" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Gets the information about the strains offered by the seed company.</p></div><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__strains_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__strains_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/seed-companies/{ucpc}</span>/strains</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__strains_get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__strains_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__strains_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__strains_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "name": "Black Domina",
+      "ucpc": "VUJCJVRU4N000000000000000",
+      "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000",
+      "qr": "https://www.cannabisreports.com/strain-reports/sensi-seeds/black-domina/qr-code.svg",
+      "url": "https://www.cannabisreports.com/strain-reports/sensi-seeds/black-domina",
+      "image": "https://www.cannabisreports.com/images/strains/2/full_28da06cc8436f90fa2a70839331ed9debf417081.jpg",
+      "seedCompany": {
+        "name": "Sensi Seeds",
+        "ucpc": "VUJCJ00000000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000"
+      },
+      "genetics": {
+        "names": "Northern Lights / Ortega C99 / Hash Plant (Sensi) / Afghani Landrace",
+        "ucpc": "2NGAWWTJNV000000000000000 / 3CV7EKUTCE000000000000000 / VUJCJZ9MNQ000000000000000 / 9XVU7HGAVW000000000000000",
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/genetics"
+      },
+      "lineage": {
+        "Afghanistan": "AF",
+        "Colombia": "CO",
+        "India": "IN",
+        "Mexico": "MX",
+        "Thailand": "TH"
+      },
+      "children": {
+        "count": 22,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/children"
+      },
+      "reviews": {
+        "count": 3,
+        "link": "https://www.cannabisreports.com/api/v1.0/strains/VUJCJVRU4N000000000000000/reviews"
+      },
+      "createdAt": {
+        "datetime": "2008-08-15 19:20:00",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-06-25 23:05:43",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 63,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 7,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/strains?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_seed_companies__ucpc__reviews"><span class="parent">/seed-companies/{ucpc}</span>/reviews</a> <span class="methods"><a href="#seed_companies__ucpc__reviews_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_seed_companies__ucpc__reviews" class="panel-collapse collapse"><div class="panel-body"><div class="resource-description"><p>Gets the reviews for the strains available from the seed company.</p></div><div class="list-group"><div onclick="window.location.href = '#seed_companies__ucpc__reviews_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="seed_companies__ucpc__reviews_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/seed-companies/{ucpc}</span>/reviews</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#seed_companies__ucpc__reviews_get_request" data-toggle="tab">Request</a></li><li><a href="#seed_companies__ucpc__reviews_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="seed_companies__ucpc__reviews_get_request"><h3>URI Parameters</h3><ul><li><strong>ucpc</strong>: <em>required (string)</em><p>UCPC for the cannabis seed company you want information about.</p><p><strong>Example</strong>:</p><pre>VUJCJ00000000000000000000</pre></li></ul><h3>Query Parameters</h3><ul><li><strong>page</strong>: <em>(integer)</em><p>Which page of results you want.</p><p>By default, Cannabis Reports will return 10 records at a time for the strains API. You can use the page argument to fetch the page of results you want.</p><p>Check out the pagination section of this documentation for more information.</p></li><li><strong>sort</strong>: <em>(string)</em><p>How you would like the results sorted.</p><p>You can include a single sort option to get the records by when they were updated, created, or alphabetically.</p><table class="table table-bordered table-hover"><thead><tr><th>Sort Option</th><th>Sort Direction</th></tr></thead><tbody><tr><td>createdAt</td><td>Oldest records.</td></tr><tr><td>-createdAt</td><td>Newest records.</td></tr><tr><td>updatedAt</td><td>Oldest updated records</td></tr><tr><td>-updatedAt</td><td>Newly updated records.</td></tr><tr><td>name</td><td>Alphabetically stating with numeric strains. 0-9, A-Z.</td></tr><tr><td>-name</td><td>Alphabetically starting with Z and working back through numeric strains. Z-A, 9-0.</td></tr></tbody></table></li></ul></div><div class="tab-pane" id="seed_companies__ucpc__reviews_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "data": [
+    {
+      "link": "https://www.cannabisreports.com/api/v1.0/reviews/8816186ce68961c874f0b92a487a2f38fc4acee0",
+      "url": "https://www.cannabisreports.com/smoke-reports/2009/11/11/8816186ce68961c874f0b92a487a2f38fc4acee0/anonymous",
+      "euphoria": "8",
+      "creativity": null,
+      "pain_relief": null,
+      "appetite_gain": "6",
+      "calming": null,
+      "anxiety": "3",
+      "spicy": "0",
+      "earthy": "0",
+      "fruity": "6",
+      "sour": "2",
+      "dry_mouth": null,
+      "createdAt": {
+        "datetime": "2009-11-11 02:40:05",
+        "timezone": "UTC"
+      },
+      "updatedAt": {
+        "datetime": "2014-05-16 03:20:38",
+        "timezone": "UTC"
+      }
+    },
+    {...}
+  ],
+  "meta": {
+    "pagination": {
+      "total": 25,
+      "count": 10,
+      "per_page": 10,
+      "current_page": 1,
+      "total_pages": 3,
+      "links": {
+        "next": "https://www.cannabisreports.com/api/v1.0/seed-companies/VUJCJ00000000000000000000/reviews?page=2"
+      }
+    }
+  }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "message": "Not found. Could not find a seedc company with that UCPC.",
+  "status_code": 404
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#strains">Strains</a></li><li><a href="#flowers">Flowers</a></li><li><a href="#extracts">Extracts</a></li><li><a href="#edibles">Edibles</a></li><li><a href="#products">Products</a></li><li><a href="#producers">Producers</a></li><li><a href="#dispensaries">Dispensaries</a></li><li><a href="#seed_companies__ucpc_">Seed Companies</a></li></ul></div></div></div></div></body></html>

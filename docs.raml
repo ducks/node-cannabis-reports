@@ -1346,3 +1346,71 @@ title: node-cannabis-reports
             body:
               application/json:
                 example: !include raml/data/producers/producers-404.js
+
+/seed-companies/{ucpc}:
+  displayName: Seed Companies
+  description: !include raml/data/seed-companies/seed-companies-description.md
+  uriParameters:
+    ucpc:
+      type: string
+      example: VUJCJ00000000000000000000
+      description: UCPC for the cannabis seed company you want information
+        about.
+
+  get:
+    description: Gets an individual seed company based on the UCPC.
+
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include raml/data/seed-companies/seed-companies-200.js
+      404:
+        body:
+          application/json:
+            example: !include raml/data/seed-companies/seed-companies-404.js
+
+  /strains:
+    description: Gets the information about the strains offered by the seed
+      company. 
+
+    get:
+      queryParameters:
+        page:
+          type: integer
+          description: !include raml/data/page-option-description.md
+        sort:
+          type: string
+          description: !include raml/data/sort-option-description.md
+
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/seed-companies/strains-200.js
+        404:
+          body:
+            application/json:
+              example: !include raml/data/seed-companies/seed-companies-404.js
+
+  /reviews:
+    description: Gets the reviews for the strains available from the seed
+      company.
+    get:
+      queryParameters:
+        page:
+          type: integer
+          description: !include raml/data/page-option-description.md
+        sort:
+          type: string
+          description: !include raml/data/sort-option-description.md
+
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/seed-companies/reviews-200.js
+        404:
+          body:
+            application/json:
+              example: !include raml/data/seed-companies/seed-companies-404.js
