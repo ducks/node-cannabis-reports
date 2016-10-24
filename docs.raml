@@ -1006,3 +1006,150 @@ title: node-cannabis-reports
             body:
               application/json:
                 example: !include raml/data/products/products-404.js
+
+/producers:
+  displayName: Producers
+  description: !include raml/data/products/products-description.md 
+    
+  get:
+    description: Gets a paginated list of producers from the system.
+    queryParameters:
+      page:
+        type: integer
+        description: !include raml/data/page-option-description.md
+      sort:
+        type: string
+        description: !include raml/data/sort-option-description.md
+
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include raml/data/producers/producers.js
+      400:
+        body:
+          application/json:
+            example: !include raml/data/invalid-sort-400.js
+
+  /{ucpc}:
+    uriParameters:
+      ucpc:
+        type: string
+        description: UCPC of the producer you want information about.
+        example: "0000000000L6M7E0000000000"
+        required: true
+    get:
+      description: Gets an individual producer based on the UCPC.
+
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include raml/data/producers/producers-ucpc-200.js
+        400:
+          body:
+            application/json:
+              example: !include raml/data/producers/producers-404.js
+
+    /extracts:
+      get:
+        description: Gets a paginated list of extracts for a producer with the
+          given UCPC. 
+        queryParameters:
+          page:
+            type: integer
+            description: !include raml/data/page-option-description.md
+          sort:
+            type: string
+            description: !include raml/data/sort-option-description.md
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-extracts-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-404.js
+
+    /edibles:
+      get:
+        description: Gets a paginated list of edibles for a producer with the
+          given UCPC. 
+        queryParameters:
+          page:
+            type: integer
+            description: !include raml/data/page-option-description.md
+          sort:
+            type: string
+            description: !include raml/data/sort-option-description.md
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-edibles-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-404.js
+
+    /products:
+      get:
+        description: Gets a paginated list of products for a producer with the
+          given UCPC. 
+        queryParameters:
+          page:
+            type: integer
+            description: !include raml/data/page-option-description.md
+          sort:
+            type: string
+            description: !include raml/data/sort-option-description.md
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-products-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-404.js
+
+    /availability/geo/{lat}/{lng}/{radius}:
+      description: This will provide a paginated list of item summary objects
+        for all availability from this producer.
+      uriParameters:
+        lat:
+          type: string
+          example: 37.7749295
+          description: Latitude for the center of your availability search.
+          required: true
+        lng:
+          type: string
+          example: -122.4194155
+          description: Longitude for the center of your availability search.
+          required: true
+        radius:
+          type: integer
+          example: 10
+          description: Radius to search for in miles, max 25.
+
+      get:
+        queryParameters:
+          page:
+            type: integer
+            description: !include raml/data/page-option-description.md
+        description: Get information about the availability of everything from
+          a producer using latitude and longitude. 
+
+        responses:
+          200:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-availability-200.js
+          404:
+            body:
+              application/json:
+                example: !include raml/data/producers/producers-404.js
