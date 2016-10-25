@@ -25,6 +25,9 @@ This module uses [RAML](http://raml.org).
 The docs are located in `index.html`.
 You can regenerate the docs by running `yarn run docs`.
 
+They can also be viewed online at:
+https://rjgoldsborough.github.io/node-cannabis-reports
+
 ## Usage
 
 ```
