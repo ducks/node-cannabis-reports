@@ -8,13 +8,15 @@ const expect = chai.expect;
 
 describe('Strains', function() {
 
-  it('should get ALL strains GET /strains', function() {
-    let data = require('./data/strains/strains');
-    let stub = sinon.stub(api.Strains, 'getAll').resolves(data);
+  describe('GET /strains', function() {
+    it('should get ALL strains', function() {
+      let data = require('./data/strains/strains');
+      let stub = sinon.stub(api.Strains, 'getAll').resolves(data);
 
-    return api.Strains.getAll().then(function(res) {
-      expect(res.data).to.not.be.empty;
-      expect(res.data).to.be.an('array');
+      return api.Strains.getAll().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('array');
+      });
     });
   });
 
