@@ -3,6 +3,8 @@
 badge](https://travis-ci.org/rjgoldsborough/node-cannabis-reports.svg?branch=master)
 </a>
 
+[![Coverage Status](https://coveralls.io/repos/github/rjgoldsborough/node-cannabis-reports/badge.svg?branch=master)](https://coveralls.io/github/rjgoldsborough/node-cannabis-reports?branch=master)
+
 # Node Cannabis Reports
 
 A node wrapper around 
