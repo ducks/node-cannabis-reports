@@ -232,3 +232,17 @@ describe('Flowers', function() {
        });
   });
 });
+
+describe('Extracts', function() {
+  describe('GET /extracts', function() {
+    it('should get ALL extracts', function() {
+      let data = require('./data/extracts/extracts');
+      let stub = sinon.stub(api.Extracts, 'getAll').resolves(data);
+
+      return api.Extracts.getAll().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('array');
+      });
+    });
+  });
+});
