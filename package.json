@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc mocha",
     "docs": "raml2html -- docs.raml > index.html",
-    "overalls": "nyc -- report --reporter=text-lcov | coveralls"
+    "overalls": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "cannabis"
