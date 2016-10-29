@@ -32,7 +32,6 @@ const extracts = {
         "timezone": "UTC"
       }
     },
-    {...}
   ],
   "meta": {
     "pagination": {
