@@ -245,4 +245,102 @@ describe('Extracts', function() {
       });
     });
   });
+
+  describe('GET /extracts/type/:extractType', function() {
+    it('should get extracts of a certain type', function() {
+      let data = require('./data/extracts/type');
+      let stub = sinon.stub(api.Extracts, 'getByType').resolves(data);
+
+      return api.Extracts.getByType().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('array');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc', function() {
+    it('should get an individual extract based on the UCPC', function() {
+      let data = require('./data/extracts/ucpc');
+      let stub = sinon.stub(api.Extracts, 'getExtract').resolves(data);
+
+      return api.Extracts.getExtract().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('object');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc/user', function() {
+    it('should get the user who added the product to the database', function() {
+      let data = require('./data/extracts/user');
+      let stub = sinon.stub(api.Extracts, 'getUser').resolves(data);
+
+      return api.Extracts.getUser().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('object');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc/reviews', function() {
+    it('should get the reviews for a cannabis extract', function() {
+      let data = require('./data/extracts/reviews');
+      let stub = sinon.stub(api.Extracts, 'getReviews').resolves(data);
+
+      return api.Extracts.getReviews().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('array');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc/effectsFlavors', function() {
+    it('should get the average effects and flavors from reviews for this extracts',
+       function() {
+         let data = require('./data/extracts/effectsFlavors');
+         let stub = sinon.stub(api.Extracts, 'getEffectsFlavors').resolves(data);
+
+         return api.Flowers.getEffectsFlavors().then(function(res) {
+           expect(res.data).to.not.be.empty;
+           expect(res.data).to.be.an('object');
+         });
+       });
+  });
+
+  describe('GET /extracts/:ucpc/producer', function() {
+    it('should get the producer for a given extract', function() {
+      let data = require('./data/extracts/producer');
+      let stub = sinon.stub(api.Extracts, 'getProducer').resolves(data);
+
+      return api.Extracts.getProducer().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('object');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc/strain', function() {
+    it('should get the information about a strain for a extract with the given UCPC', function() {
+      let data = require('./data/extracts/strain');
+      let stub = sinon.stub(api.Extracts, 'getStrain').resolves(data);
+
+      return api.Extracts.getProducer().then(function(res) {
+        expect(res.data).to.not.be.empty;
+        expect(res.data).to.be.an('object');
+      });
+    });
+  });
+
+  describe('GET /extracts/:ucpc/availability/geo/:lat/:lng/:radius', function() {
+    it('should get information about the availability of a product using latitude and longitude',
+       function() {
+         let data = require('./data/extracts/availability');
+         let stub = sinon.stub(api.Extracts, 'getAvailability').resolves(data);
+
+         return api.Extracts.getAvailability().then(function(res) {
+           expect(res.data).to.not.be.empty;
+           expect(res.data).to.be.an('array');
+         });
+       });
+  });
 });
