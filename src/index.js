@@ -1,16 +1,16 @@
 'use strict';
 
-const config = require('config');
+import config from 'config';
 
-const CannabisHelper = require('./helper');
-const Strains = require('./strains');
-const Flowers = require('./flowers');
-const Extracts = require('./extracts');
-const Edibles = require('./edibles');
-const Products = require('./products');
-const Producers = require('./producers');
-const Dispensaries = require('./dispensaries');
-const SeedCompanies = require('./seed-companies');
+import CannabisHelper from './helper';
+import Strains from './strains';
+import Flowers from './flowers';
+import Extracts from './extracts';
+import Edibles from './edibles';
+import Products from './products';
+import Producers from './producers';
+import Dispensaries from './dispensaries';
+import SeedCompanies from './seed-companies';
 
 class CannabisReport {
   constructor(key) {
