@@ -1,6 +1,6 @@
 'use strict';
 
-export default class Edibles {
+class Edibles {
   constructor(ch) {
     this._ch = ch;
   }
@@ -50,3 +50,5 @@ export default class Edibles {
     return this._ch.get(url);
   }
 }
+
+module.exports = Edibles;

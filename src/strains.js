@@ -1,6 +1,6 @@
 'use strict';
 
-export default class Strains {
+class Strains {
   constructor(ch) {
     this._ch = ch;
   }
@@ -54,3 +54,5 @@ export default class Strains {
     return this._ch.get(url);
   }
 }
+
+module.exports = Strains;

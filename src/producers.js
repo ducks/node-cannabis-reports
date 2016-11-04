@@ -1,6 +1,6 @@
 'use strict';
 
-export default class Producers {
+class Producers {
   constructor(ch) {
     this._ch = ch;
   }
@@ -31,3 +31,5 @@ export default class Producers {
     return this._ch.get(url);
   }
 }
+
+module.exports = Producers;
