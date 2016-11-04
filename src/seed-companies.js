@@ -1,6 +1,6 @@
 'use strict';
 
-export default class SeedCompanies {
+class SeedCompanies {
   constructor(ch) {
     this._ch = ch;
   }
@@ -20,3 +20,5 @@ export default class SeedCompanies {
     return this._ch.get(url);
   }
 }
+
+module.exports = SeedCompanies;

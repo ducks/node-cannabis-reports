@@ -1,9 +1,9 @@
 'use strict';
 
-import config from 'config';
-import https from 'https';
+const config = require('config');
+const https = require('https');
 
-export default class CannabisHelper {
+class CannabisHelper {
   constructor(key) {
     if (!key) {
       throw new Error("No API key found"); 
@@ -45,3 +45,5 @@ export default class CannabisHelper {
     });
   }
 }
+
+module.exports = CannabisHelper;

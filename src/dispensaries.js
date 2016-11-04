@@ -1,6 +1,6 @@
 'use strict';
 
-export default class Dispensaries {
+class Dispensaries {
   constructor(ch) {
     this._ch = ch;
   }
@@ -35,3 +35,5 @@ export default class Dispensaries {
     return this._ch.get(url);
   }
 }
+
+module.exports = Dispensaries;
