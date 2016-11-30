@@ -1,9 +1,9 @@
-<a href="https://travis-ci.org/rjgoldsborough/node-cannabis-reports">
+<a href="https://travis-ci.org/ducks/node-cannabis-reports">
 ![Node Cannabis Reports travisci
-badge](https://travis-ci.org/rjgoldsborough/node-cannabis-reports.svg?branch=master)
+badge](https://travis-ci.org/ducks/node-cannabis-reports.svg?branch=master)
 </a>
 
-[![Coverage Status](https://coveralls.io/repos/github/rjgoldsborough/node-cannabis-reports/badge.svg?branch=master)](https://coveralls.io/github/rjgoldsborough/node-cannabis-reports?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ducks/node-cannabis-reports/badge.svg?branch=master)](https://coveralls.io/github/ducks/node-cannabis-reports?branch=master)
 
 # Node Cannabis Reports
 
@@ -26,7 +26,7 @@ The docs are located in `index.html`.
 You can regenerate the docs by running `yarn run docs`.
 
 They can also be viewed online at:
-https://rjgoldsborough.github.io/node-cannabis-reports
+https://ducks.github.io/node-cannabis-reports
 
 ## Usage
 
